@@ -1,0 +1,22 @@
+@mixin flexSpaceBetween(){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+@mixin flexCenter(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ @mixin flexColumn(){
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+ @mixin flexGap(){
+   display: flex;
+   gap: 20px ;
+   justify-content: center;
+   align-items: center;
+ }

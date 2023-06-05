@@ -1,0 +1,276 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1 {
+  font-size: 64px !important;
+  font-weight: 700 !important;
+}
+
+h2 {
+  font-size: 40px !important;
+  font-weight: 700 !important;
+}
+
+h3 {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+}
+
+h4 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+h5 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+a {
+  font-size: 16px !important;
+}
+
+p {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+  z-index: 3;
+}
+header .header-top {
+  padding: 20px 0;
+}
+header .header-top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-top .container .header-top-left {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+header .header-top .container .header-top-left a {
+  color: white;
+}
+header .header-top .container .header-top-left a span {
+  padding-left: 10px;
+}
+header .header-top .container .header-top-right {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+header .header-top .container .header-top-right a {
+  color: white;
+}
+header .header-top .container .header-top-right a i {
+  color: #468ae7;
+}
+header .header-top .container .header-top-right a span {
+  padding-left: 10px;
+}
+header .header-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 5px;
+}
+header .header-bottom .container nav .allUl {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+header .header-bottom .container nav .allUl li .allA {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+header .header-bottom .container nav .allUl li .allA::before {
+  content: "";
+  position: absolute;
+  display: none;
+  background-color: #467fe7;
+  width: 100%;
+  height: 3px;
+  z-index: 4;
+  bottom: -38px;
+}
+header .header-bottom .container nav .allUl li .allA:hover::before {
+  display: block;
+}
+header .dropdown-toggle::after {
+  display: none;
+}
+header .dropdown:hover > .dropdown-menu {
+  display: block;
+  top: 23px;
+  padding: 10px;
+  border-radius: 0;
+  border-color: rgb(46, 46, 46);
+  background-color: rgb(46, 46, 46);
+}
+header .dropdown:hover > .dropdown-menu li a {
+  padding: 10px;
+  color: white;
+}
+header .dropdown:hover > .dropdown-menu li a:hover {
+  background-color: grey;
+}
+header > .dropdown-toggle:active {
+  pointer-events: none;
+}/*# sourceMappingURL=main.css.map */

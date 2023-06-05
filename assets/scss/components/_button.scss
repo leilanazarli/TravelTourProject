@@ -1,0 +1,23 @@
+%button-square{
+padding: 20px 32px;
+font-size: 13px;
+color: white;
+font-weight: 600;
+font-family: $font-roboto;
+background-color: $button-color;
+    &:hover{
+        background-color: $button-hover-color;
+    }
+}
+%button-oval{
+padding: 15px 33px;
+font-size: 13px;
+font-weight: 600;
+color: white;
+border-radius: 50px;
+font-family: $font-roboto;
+background-color: $button-color;
+    &:hover{
+        background-color: $button-hover-color;
+    }
+}
