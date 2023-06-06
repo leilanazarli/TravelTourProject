@@ -42,6 +42,7 @@ z-index: 3;
                         color: white;
                         font-family: $font-roboto;
                         position: relative;
+                        transition: .4s;
                         &::before{
                             content: "";
                             position: absolute;
