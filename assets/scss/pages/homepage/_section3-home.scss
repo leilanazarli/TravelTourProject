@@ -1,0 +1,29 @@
+.home-sec3{
+background: url(../img/home-img/search-bg.jpg);
+    .home-sec3-top{
+        padding: 60px 0;
+        background: rgba(45, 44, 44, 0.6);
+        .container{
+            @include flexCenter();
+            gap: 20px;
+            .form-select ,.form-control{
+            background-color: #585d6b;
+            border-radius: 0;
+            border-color: #666b7a;
+            box-shadow: none;
+            margin: 0;
+            }
+            label{
+             color: white;
+             margin-bottom: 20px;
+             font-family: $font-poppins;
+             font-weight: 700;
+             font-size: 14px;
+            }
+            button{
+                @extend %button-square;
+                padding: 12px ;
+            }
+        }
+    }
+}

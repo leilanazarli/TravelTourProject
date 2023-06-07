@@ -2,8 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800;900&family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@400;500;800;900&family=Roboto:wght@300&display=swap");
 * {
   text-decoration: none;
 }
@@ -148,7 +149,7 @@ table {
   padding: 0;
 }
 
-.home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col .learnmore {
+.home-sec3 .home-sec3-top .container button, .home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col .learnmore {
   padding: 20px 32px;
   font-size: 13px;
   color: white;
@@ -157,7 +158,7 @@ table {
   font-family: "Roboto", sans-serif;
   background-color: #4692e7;
 }
-.home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col .learnmore:hover {
+.home-sec3 .home-sec3-top .container button:hover, .home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col .learnmore:hover {
   background-color: #0693e3;
 }
 
@@ -261,10 +262,11 @@ header > .dropdown-toggle:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 .home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col span {
   font-size: 74px !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Dancing Script", cursive;
   font-weight: bolder !important;
   color: white;
 }
@@ -308,4 +310,35 @@ header > .dropdown-toggle:active {
   font-family: "Poppins", sans-serif;
   color: #b9cdf3;
   font-weight: 400;
+}
+
+.home-sec3 {
+  background: url(../img/home-img/search-bg.jpg);
+}
+.home-sec3 .home-sec3-top {
+  padding: 60px 0;
+  background: rgba(45, 44, 44, 0.6);
+}
+.home-sec3 .home-sec3-top .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.home-sec3 .home-sec3-top .container .form-select, .home-sec3 .home-sec3-top .container .form-control {
+  background-color: #585d6b;
+  border-radius: 0;
+  border-color: #666b7a;
+  box-shadow: none;
+  margin: 0;
+}
+.home-sec3 .home-sec3-top .container label {
+  color: white;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+.home-sec3 .home-sec3-top .container button {
+  padding: 12px;
 }/*# sourceMappingURL=main.css.map */
