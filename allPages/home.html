@@ -173,10 +173,14 @@
     <section class="home-sec3">
       <div class="home-sec3-top">
         <div class="container">
-          <div class="keywords search">
+          <div class="keywords search ">
             <label for="">Keywords</label>
-            <input type="search" class="form-control"><i class="fa-solid fa-magnifying-glass"></i>
-          </div>
+            <div class="input-group">
+              <input type="search" class="form-control" aria-label="Amount (to the nearest dollar)">
+              <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            
+            </div>
           <div class="activity search">
             <label for="">Activity</label>
             <select name="" id="" class="form-select">
@@ -217,23 +221,47 @@
             <input type="date" class="form-control">
           </div>
           <div class="buttonsearch  search">
-            <button class="">SEARCH</button>
+            <button class="searchbtn">SEARCH</button>
           </div>
         </div>
       </div>
       <div class="home-sec3-bottom">
         <div class="container ">
-            <div class="home-sec3-top-text">
-              <h3>Popular Tour Packages</h3>
-              <a href="">/  View All Tours</a>
+            <div class="home-sec3-bottom-text">
+              <h3>Popular Tour Packages </h3>
+              <a href=""> <span> / </span>  View All Tours</a>
             </div>
             <div class="home-sec3-bottom-card">
-            
+            <div class="row">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div><div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
             </div>
         </div>
       </div>
     </section>
-    
+    <section class="home-sec4 ">
+      <div class="container">
+        <div class="home-sec4-bottom-text">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Popular Tour Packages </h3>
+          <a href=""> <span> / </span>  View All Tours</a>
+        </div>
+      </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../assets/js/home.js"></script>

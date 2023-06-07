@@ -1,17 +1,22 @@
 .home-sec3{
 background: url(../img/home-img/search-bg.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
     .home-sec3-top{
         padding: 60px 0;
         background: rgba(45, 44, 44, 0.6);
         .container{
             @include flexCenter();
             gap: 20px;
-            .form-select ,.form-control{
+            .form-select ,.form-control ,span{
             background-color: #585d6b;
             border-radius: 0;
             border-color: #666b7a;
             box-shadow: none;
             margin: 0;
+            color: #ccd5e8;
+            font-family: $font-roboto;
             }
             label{
              color: white;
@@ -21,8 +26,39 @@ background: url(../img/home-img/search-bg.jpg);
              font-size: 14px;
             }
             button{
-                @extend %button-square;
-                padding: 12px ;
+                @extend %button-square ;
+                padding: 11px ;
+                margin-top: 35px;
+            }
+            .keywords{
+                .input-group{
+                    span{
+                    border-left: none;
+                    }
+                    input{
+                        border-right: none;
+                    }
+                }
+            
+            }
+        }
+    }
+    .home-sec3-bottom{
+        .home-sec3-bottom-text{
+            @include flexLeft();
+            h3{
+                font-size:29px ;
+                font-family: $font-poppins;
+                color: white
+            }
+            a{
+                font-size:15px ;
+                color:#bdd4ff;
+                margin-bottom: 0;
+                span{
+                padding: 0 20px;
+                font-size: 29px;
+                }
             }
         }
     }

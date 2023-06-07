@@ -314,6 +314,9 @@ header > .dropdown-toggle:active {
 
 .home-sec3 {
   background: url(../img/home-img/search-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .home-sec3 .home-sec3-top {
   padding: 60px 0;
@@ -325,12 +328,14 @@ header > .dropdown-toggle:active {
   align-items: center;
   gap: 20px;
 }
-.home-sec3 .home-sec3-top .container .form-select, .home-sec3 .home-sec3-top .container .form-control {
+.home-sec3 .home-sec3-top .container .form-select, .home-sec3 .home-sec3-top .container .form-control, .home-sec3 .home-sec3-top .container span {
   background-color: #585d6b;
   border-radius: 0;
   border-color: #666b7a;
   box-shadow: none;
   margin: 0;
+  color: #ccd5e8;
+  font-family: "Roboto", sans-serif;
 }
 .home-sec3 .home-sec3-top .container label {
   color: white;
@@ -340,5 +345,31 @@ header > .dropdown-toggle:active {
   font-size: 14px;
 }
 .home-sec3 .home-sec3-top .container button {
-  padding: 12px;
+  padding: 11px;
+  margin-top: 35px;
+}
+.home-sec3 .home-sec3-top .container .keywords .input-group span {
+  border-left: none;
+}
+.home-sec3 .home-sec3-top .container .keywords .input-group input {
+  border-right: none;
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-text {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-text h3 {
+  font-size: 29px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-text a {
+  font-size: 15px;
+  color: #bdd4ff;
+  margin-bottom: 0;
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-text a span {
+  padding: 0 20px;
+  font-size: 29px;
 }/*# sourceMappingURL=main.css.map */
