@@ -372,4 +372,38 @@ header > .dropdown-toggle:active {
 .home-sec3 .home-sec3-bottom .home-sec3-bottom-text a span {
   padding: 0 20px;
   font-size: 29px;
+}
+
+.home-sec4 .home-sec4-top {
+  padding: 40px 0;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 20px;
+}
+.home-sec4 .home-sec4-top .home-sec4-top-title {
+  display: flex;
+}
+.home-sec4 .home-sec4-top .home-sec4-top-title h3 {
+  font-size: 29px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+.home-sec4 .home-sec4-top .home-sec4-top-title h3 i {
+  padding-right: 20px;
+}
+.home-sec4 .home-sec4-top .home-sec4-top-title a {
+  font-size: 15px;
+  color: #bdd4ff;
+  margin-bottom: 0;
+}
+.home-sec4 .home-sec4-top .home-sec4-top-title a span {
+  padding: 0 20px;
+  font-size: 29px;
+}
+.home-sec4 .home-sec4-top .home-sec4-top-text p {
+  color: #8c8c8c;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
 }/*# sourceMappingURL=main.css.map */
