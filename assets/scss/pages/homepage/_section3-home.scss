@@ -44,8 +44,10 @@ background-size: cover;
         }
     }
     .home-sec3-bottom{
+    padding: 50px 0;
         .home-sec3-bottom-text{
             @include flexLeft();
+            padding: 20px 0;
             h3{
                 font-size:29px ;
                 font-family: $font-poppins;

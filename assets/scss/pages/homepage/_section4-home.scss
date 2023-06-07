@@ -34,4 +34,27 @@
             }
             }
     }
+    .home-sec4-bottom{
+        .row{
+        margin: 0;
+            .carda{
+            width: 20%;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+                img{
+                width: 100%;
+                }
+                .carda-text{
+                position: absolute;
+                bottom: 0;
+                    h5{
+                    color: white;
+                    }
+                }
+            }
+        }
+    }
+
 }

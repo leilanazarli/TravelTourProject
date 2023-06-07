@@ -354,10 +354,14 @@ header > .dropdown-toggle:active {
 .home-sec3 .home-sec3-top .container .keywords .input-group input {
   border-right: none;
 }
+.home-sec3 .home-sec3-bottom {
+  padding: 50px 0;
+}
 .home-sec3 .home-sec3-bottom .home-sec3-bottom-text {
   display: flex;
   justify-content: left;
   align-items: center;
+  padding: 20px 0;
 }
 .home-sec3 .home-sec3-bottom .home-sec3-bottom-text h3 {
   font-size: 29px;
@@ -406,4 +410,24 @@ header > .dropdown-toggle:active {
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
+}
+.home-sec4 .home-sec4-bottom .row {
+  margin: 0;
+}
+.home-sec4 .home-sec4-bottom .row .carda {
+  width: 20%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.home-sec4 .home-sec4-bottom .row .carda img {
+  width: 100%;
+}
+.home-sec4 .home-sec4-bottom .row .carda .carda-text {
+  position: absolute;
+  bottom: 0;
+}
+.home-sec4 .home-sec4-bottom .row .carda .carda-text h5 {
+  color: white;
 }/*# sourceMappingURL=main.css.map */
