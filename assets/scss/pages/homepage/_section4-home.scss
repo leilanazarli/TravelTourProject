@@ -1,4 +1,5 @@
 .home-sec4{
+    padding: 60px 0;
     .home-sec4-top{
     padding: 40px 0;
         display: flex;
@@ -39,18 +40,62 @@
         margin: 0;
             .carda{
             width: 20%;
+            overflow: hidden;
             position: relative;
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-                img{
-                width: 100%;
-                }
+            &:hover{
                 .carda-text{
-                position: absolute;
-                bottom: 0;
+                    transition:.5s;
+                    background-color: rgba(0,0,0,0.7);
+                    .carda-text-hidden{
+                    display: block;
+                }
+            }
+            
+        }
+        img{
+            width: 100%;
+        }
+        .carda-text{
+            position: absolute;
+            height: 100%; 
+            bottom: 2.5px;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            flex-direction: column;
+            gap: 20px;
+            .carda-text-visible{
+                    @include flexSpaceBetween();
+                    padding:  10px;
                     h5{
                     color: white;
+                    font-size: 16px;
+                    font-family: 'Times New Roman', Times, serif;
+                    }
+                    p{
+                        color: $text-dark;
+                        font-size: 16px;
+                    font-family: 'Times New Roman', Times, serif;
+                    }
+                }
+                    .carda-text-hidden{
+                     display: none;
+                    a{
+                    color: $text-dark;
+                    padding: 0 5px;
+                    font-size: 16px;
+                    font-family: 'Times New Roman', Times, serif;
+                    }
+                    .line{
+                    width: 100%;
+                    font-weight: 900;
+                    height:4px ;
+                    margin-top: 10px;
+                    background-color: $text-dark;
+                    }
                     }
                 }
             }

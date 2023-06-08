@@ -1,0 +1,61 @@
+.home-sec5{
+    .container{
+    @include flexSpaceBetween();
+    font-family: $font-poppins;
+        .sec5-left{
+            h3{
+                font-size:23px ;
+                color: #383838;
+                font-weight: 100;
+                i{
+                    padding-right: 20px;
+                    color: $text-dark;
+                }
+            }
+            .row{
+            padding: 20px 0;
+                .col{
+                    display: flex;
+                    gap: 10px;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: $text-dark;
+                }
+            }
+        }
+        .sec5-right{
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            h3{
+                font-size:23px ;
+                font-weight: 100;
+                padding-bottom: 50px;
+                color: #383838;
+                i{
+                    padding-right: 20px;
+                    color: $text-dark;
+                }
+            }
+            p, .sec5-right-icon{
+                color: #8c8c8c;
+                
+            }
+            .sec5-right-icon{
+             display: flex;
+             gap: 10px;
+            }
+            .sec5-right-button{
+                input{
+                    padding: 10px 20px;
+                    border-radius: 50px;
+                    background-color: rgb(231, 231, 231);
+                    border:none;
+                }
+                .subscribeBtn{
+                    @extend %button-oval;
+                }
+            }
+        }
+    }
+}

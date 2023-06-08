@@ -62,6 +62,32 @@ background-size: cover;
                 font-size: 29px;
                 }
             }
+            
+        }
+        .home-sec3-bottom-card{
+            .row{
+                .owl-slider{
+                    .owl-carousel{
+                        .item{
+                            .card{
+                            border-radius: 0;
+                            border: none;
+                                .card-body{
+                                    @include  flexColumn();
+                                    padding: 30px 10px;
+                                    border: none;
+                                    .about{
+                                        @include flexSpaceBetween();
+                                    }
+                                    .time{
+                                        @include flexLeft();
+                                    }
+                                }
+                            }
+                        }
+                    }   
+                }
+            }
         }
     }
 }
