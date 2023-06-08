@@ -1,0 +1,23 @@
+.home-sec8{
+    background: linear-gradient(to left, #0754ab, #468be8 50%, rgb(204, 199, 199) 75%, #0654e3 75%);
+    padding: 50px 0;
+    .row{
+     @include flexCenter();
+     font-family: $font-poppins;
+     .col{
+        @include flexCenter();
+        gap: 10px;
+        h3,h6{
+        color: white ;
+        }
+        h3{
+        margin-left: -30px;
+            font-size: 20px;
+        
+        }
+        p{
+        color:rgb(202, 201, 201) ;
+        }
+     }
+    }
+}

@@ -1,6 +1,43 @@
 .home-sec6{
+background: url("../img/home-img/stunning-bg.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding: 150px 0;
     .container{
         display: flex;
         justify-content: right;
+        .sec6-text{
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            font-family: $font-poppins;
+            h1{
+            font-size: 48px;
+            color: white;
+            font-weight: 900;
+                span{
+                    color: #ffb43e;
+                }
+            }
+            p{
+            color: white;
+            font-size: 15px ;
+            }
+        }
+        .seepromotionbtn{
+            padding: 15px 33px;
+            font-size: 13px;
+            font-weight: 600;
+            color:  #ffb43e;
+            border: none;
+            border-radius: 50px;
+            font-family: $font-roboto;
+            background-color: white;
+            width: 200px;
+            &:hover{
+                background-color: #4973d7;
+            }
+        }
     }
 }
