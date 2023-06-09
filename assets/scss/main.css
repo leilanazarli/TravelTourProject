@@ -784,6 +784,89 @@ header > .dropdown-toggle:active {
 .about-wrapper-content .container .skill .skill-right .col-12 .product {
   background: linear-gradient(90deg, rgb(0, 0, 0) 70%, rgb(244, 244, 244) 70%);
 }
+.about-wrapper-content .container .extend .extend-left {
+  background: url("../img/about-img/shutterstock_74901229.jpg");
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.about-wrapper-content .container .extend .extend-right {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  padding: 100px 0 100px 50px;
+  background-color: #f2f2f2;
+}
+.about-wrapper-content .container .extend .extend-right .row .col-6 i {
+  color: white;
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 10px;
+  background-color: black;
+  margin-right: 10px;
+}
+.about-wrapper-content .container .extend .extend-right .row .col-6 i:hover {
+  transform: scale(0);
+}
+.about-wrapper-content .container .extend .extend-right .row .col-6 p {
+  margin-bottom: 10px;
+}
+.about-wrapper-content .container .services .services-left {
+  padding: 100px 130px 100px 0;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.about-wrapper-content .container .services .services-left button {
+  background: transparent;
+  width: 150px;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: 20px 10px;
+  perspective: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+}
+.about-wrapper-content .container .services .services-left button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+  z-index: 1;
+  transition: background 3s;
+}
+.about-wrapper-content .container .services .services-left button:hover::before {
+  animation: rotate 1s;
+  transition: all 0.5s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.about-wrapper-content .container .services .services-right {
+  padding: 100px 30px;
+  background-color: #1f1f1f;
+}
+.about-wrapper-content .container .services .services-right h3 {
+  font-size: 25px;
+  color: white;
+}
+.about-wrapper-content .container .services .services-right p {
+  color: white;
+  font-size: 16px;
+}
 
 footer .footer-top {
   padding: 70px 0;

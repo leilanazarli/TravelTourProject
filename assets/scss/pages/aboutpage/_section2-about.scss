@@ -52,5 +52,96 @@
             
             }
         }
+        .extend{
+            .extend-left{
+                background: url("../img/about-img/shutterstock_74901229.jpg");
+                background-attachment: fixed; 
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .extend-right{
+                @include onlyFlexColumn();
+                padding: 100px 0 100px 50px;
+                background-color: #f2f2f2;
+                .row{
+                    .col-6{
+                        i{
+                            color: white;
+                            border-radius: 50%;
+                            padding: 2px;
+                            font-size: 10px;
+                            background-color: black;
+                            margin-right: 10px;
+                            &:hover{
+                                transform: scale(0);
+                            }
+                        } 
+                        p{
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .services{
+            .services-left{
+                padding: 100px 130px 100px 0;
+                @include onlyFlexColumn();
+                button {
+                    background: transparent;
+                    width: 150px;
+                    color: #fff;
+                    font-size: 17px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    border: none;
+                    padding: 20px 10px;
+                    perspective: 30rem;
+                    border-radius: 10px;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+                  }
+                  
+                  button::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 150px;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    border-radius: 10px;
+                    background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+                    z-index: 1;
+                    transition: background 3s;
+                  }
+                  
+                  button:hover::before {
+                    animation: rotate 1s;
+                    transition: all .5s;
+                  }
+                  
+                  @keyframes rotate {
+                    0% {
+                      transform: rotateY(180deg);
+                    }
+                  
+                    100% {
+                      transform: rotateY(360deg);
+                    }
+                  }
+            }
+            .services-right{
+                padding:  100px 30px;
+                background-color: #1f1f1f;
+                h3 {
+                    font-size: 25px;
+                    color: white;
+                }
+                p {
+                    color: white;
+                    font-size: 16px;
+                }
+            }
+        }
     }
 }
