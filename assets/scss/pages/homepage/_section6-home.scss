@@ -8,9 +8,7 @@ padding: 150px 0;
         display: flex;
         justify-content: right;
         .sec6-text{
-            display: flex;
-            gap: 20px;
-            flex-direction: column;
+            @include onlyFlexColumn();
             font-family: $font-poppins;
             h1{
             font-size: 48px;

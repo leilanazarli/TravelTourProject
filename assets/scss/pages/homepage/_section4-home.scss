@@ -2,10 +2,8 @@
     padding: 60px 0;
     .home-sec4-top{
     padding: 40px 0;
-        display: flex;
+    @include onlyFlexColumn();
         justify-content: left;
-        flex-direction: column;
-        gap: 20px;
             .home-sec4-top-title{
             display: flex;
                 h3{
@@ -63,10 +61,8 @@
             height: 100%; 
             bottom: 2.5px;
             width: 100%;
-            display: flex;
+            @include onlyFlexColumn();
             justify-content: end;
-            flex-direction: column;
-            gap: 20px;
             .carda-text-visible{
                     @include flexSpaceBetween();
                     padding:  10px;

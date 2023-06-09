@@ -66,27 +66,27 @@ z-index: 3;
     .dropdown-toggle::after {
         display: none;
     }
-    .dropdown {
-        &:hover {
-            & > .dropdown-menu {
-                display: block;
-                top: 23px;
-                padding: 10px;
-                border-radius: 0;
-                border-color: rgb(46, 46, 46);
-                background-color: rgb(46, 46, 46);
-                li{
-                    a{
-                    padding: 10px ;
-                    color: white;
-                    &:hover{
-                        background-color: grey;
-                    }
+    .drop{
+        &:hover{
+             .dropdown-menu {
+                        display: block;
+                        top: 43px;
+                        padding: 10px;
+                        border-radius: 0;
+                        border-color: rgb(46, 46, 46);
+                        background-color: rgb(46, 46, 46);
+                        li{
+                            a{
+                            padding: 10px ;
+                            color: white;
+                            &:hover{
+                                background-color: grey;
+                            }
+                            }
+                        }
+                        }
                     }
                 }
-                }
-            }
-        }
         & > .dropdown-toggle {
             &:active {
                 pointer-events: none;

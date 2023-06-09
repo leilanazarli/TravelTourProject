@@ -1,0 +1,56 @@
+.about-wrapper-content{
+    .container{
+    font-family: $font-poppins;
+        .row{
+            .col{
+                h3{
+                    font-size: 36px ;
+                    color: black;
+                    font-weight: 500;
+                    
+                }
+                p{
+                    font-size: 16px;
+                    color: $input-pColor;
+                    line-height: 1.6rem;
+                    
+                }
+            }
+        }
+        .skill{
+            .skill-left{
+                padding: 100px 130px 100px 0;
+                @include onlyFlexColumn();
+                
+            }
+            .skill-right{
+                padding: 100px 0 ;
+                @include onlyFlexColumn();
+                .col-12{
+                    @include onlyFlexColumn();
+                    .content{
+                        @include flexSpaceBetween();
+                    }
+                    .line{
+                        width: 100%;
+                        height: 5px;
+                        border-radius: 5px;
+                    }
+                    .branding{
+                        background: linear-gradient(90deg, rgba(0,0,0,1) 90%, rgba(244,244,244,1) 90%);
+                    }
+                    .graphic{
+                        background: rgba(0,0,0,1) 100%;
+                    }
+                    .social{
+                        background: linear-gradient(90deg, rgba(0,0,0,1) 85%, rgba(244,244,244,1) 85%);
+                    }
+                    .product{
+                        background: linear-gradient(90deg, rgba(0,0,0,1) 70%, rgba(244,244,244,1) 70%);
+                    }
+                }
+            
+            }
+        }
+    }
+}
