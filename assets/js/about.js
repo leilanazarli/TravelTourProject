@@ -14,7 +14,7 @@ async function getData(){
         <img src="./assets/img/about-img/${element.image}" alt="">
         </div>
         <div class="card-body">
-        <a href="./teamdetail.html?id=${element.id}">'${element.name} ${element.surname}'</a>
+        <a href="./teamdetail.html?id=${element.id}">${element.name}</a>
         <p>${element.position}</p>
         </div>
         </div>
