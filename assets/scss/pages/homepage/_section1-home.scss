@@ -2,23 +2,42 @@
     .carousel{
         .carousel-inner{
             .carousel-item{
+                animation: fadeIn 3s;
+                @keyframes fadeIn {
+                    0% { opacity: 0; }
+                    100% { opacity: 1; }
+                }
                 .carousel-caption{
                     .row{
                         .col{
                                 @include flexColumn();
                                 gap: 30px;
+                                animation-duration: 3s;
+                                animation-name: slidein;
+                                animation-iteration-count: 1;
+                                @keyframes slidein {
+                                    from {
+                                      margin-left: 100%;
+                                      width: 300%;
+                                    }
+                                  
+                                    to {
+                                      margin-left: 0%;
+                                      width: 100%;
+                                    }
+                                  }
                             span{
                                 font-size: 74px !important;
                                 font-family:  $font-dancing;
                                 font-weight:bolder !important;
                                 color: white;
-                                
                             }
                             h1{
                                 color: $text-pColor;
                                 font-family: $font-poppins;
                                 font-size: 41px;
                                 font-weight: 900 ;
+                               
                             }
                             h6{
                                 font-size: 16px;

@@ -256,6 +256,17 @@ header > .dropdown-toggle:active {
   pointer-events: none;
 }
 
+.home-sec1 .carousel .carousel-inner .carousel-item {
+  animation: fadeIn 3s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col {
   display: flex;
   gap: 10px;
@@ -263,6 +274,19 @@ header > .dropdown-toggle:active {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 .home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col span {
   font-size: 74px !important;
