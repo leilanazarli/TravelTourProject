@@ -4,5 +4,33 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 250px 0;
+    padding: 170px 0;
+    .container{
+    @include flexCenter();
+        .detail-wrapper-about-left{
+            img{
+                border-radius: 50%;
+                width: 50%;
+            }
+        }
+        .detail-wrapper-about-right{
+            color: white;
+            h1{
+                font-family: $font-dancing;
+                font-weight: 800;
+                font-size: 45px;
+            }
+            p{
+                font-size: 23px;
+                font-weight: 400;
+                font-family: $font-poppins;
+                margin: 20px 0;
+            }
+            a{
+                margin-right: 10px;
+                color: white;
+                
+            }
+        }
+    }
 }
