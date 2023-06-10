@@ -131,17 +131,26 @@
                   }
             }
             .services-right{
-                padding:  100px 30px;
+                padding:  100px 50px;
+                display: flex;
                 background-color: #1f1f1f;
-                h3 {
-                    font-size: 25px;
-                    color: white;
+                .row{
+                    gap: 30px;
+                    align-items: center;
+                    .col-12{
+                    display: flex;
+                    gap: 30px;
+                    h3 {
+                        font-size: 20px;
+                        color: white;
+                    }
+                    p {
+                        color: white;
+                        font-size: 14px;
+                    }
                 }
-                p {
-                    color: white;
-                    font-size: 16px;
                 }
-            }
+        }
         }
     }
 }

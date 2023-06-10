@@ -856,16 +856,29 @@ header > .dropdown-toggle:active {
   }
 }
 .about-wrapper-content .container .services .services-right {
-  padding: 100px 30px;
+  padding: 100px 50px;
+  display: flex;
   background-color: #1f1f1f;
 }
-.about-wrapper-content .container .services .services-right h3 {
-  font-size: 25px;
+.about-wrapper-content .container .services .services-right .row {
+  gap: 30px;
+  align-items: center;
+}
+.about-wrapper-content .container .services .services-right .row .col-12 {
+  display: flex;
+  gap: 30px;
+}
+.about-wrapper-content .container .services .services-right .row .col-12 h3 {
+  font-size: 20px;
   color: white;
 }
-.about-wrapper-content .container .services .services-right p {
+.about-wrapper-content .container .services .services-right .row .col-12 p {
   color: white;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+.about-team .container {
+  padding: 100px 0;
 }
 
 footer .footer-top {
