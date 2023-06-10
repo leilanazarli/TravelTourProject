@@ -1,8 +1,6 @@
 .about-traveltour-page{
     background: url("../img/about-img/page-title-background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include backgroundImgFixed();
     padding: 250px 0;
     h1{
         color: white; 

@@ -1,0 +1,18 @@
+.ourservices-title{
+    background: url(../img/ourservices-img/section-bg-4.jpg);
+    @include backgroundImgFixed();
+    padding: 200px 0;
+    .container{
+        h1{
+            font-size: 45px;
+            color: white;
+            font-weight: 900;
+            font-family: $font-dancing;
+        }
+        p{
+            color: #8f8f8f;
+            font-weight: 400;
+            font-size: 24px;
+        }
+    }
+}

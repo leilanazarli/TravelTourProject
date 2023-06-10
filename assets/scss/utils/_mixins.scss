@@ -32,3 +32,9 @@
   gap: 20px;
   flex-direction: column;
 }
+@mixin backgroundImgFixed(){
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

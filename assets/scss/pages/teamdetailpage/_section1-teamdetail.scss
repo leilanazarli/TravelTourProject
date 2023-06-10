@@ -1,9 +1,6 @@
 .detail-wrapper-about{
     background: url("../img/teamdetail-img/section-bg-3.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    @include backgroundImgFixed();
     padding: 170px 0;
     .container{
     @include flexCenter();

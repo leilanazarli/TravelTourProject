@@ -37,6 +37,7 @@
         .row{
         margin: 0;
             .carda{
+                transition: 0.4s ease-out;
             width: 20%;
             overflow: hidden;
             position: relative;
@@ -47,11 +48,13 @@
                 .carda-text{
                     transition:.5s;
                     background-color: rgba(0,0,0,0.7);
+                    .carda-text-visible{
+                        transform: translateY(50%);
+                    }
                     .carda-text-hidden{
-                    display: block;
+                    transform: translateY(0);
                 }
             }
-            
         }
         img{
             width: 100%;
@@ -59,13 +62,14 @@
         .carda-text{
             position: absolute;
             height: 100%; 
-            bottom: 2.5px;
+            bottom: 2px;
             width: 100%;
             @include onlyFlexColumn();
             justify-content: end;
             .carda-text-visible{
                     @include flexSpaceBetween();
                     padding:  10px;
+                    transform: translateY(90%);
                     h5{
                     color: white;
                     font-size: 16px;
@@ -78,7 +82,9 @@
                     }
                 }
                     .carda-text-hidden{
-                     display: none;
+                    display: block;
+                    transition: 0.4s ease-out;
+                    transform: translateY(100%);
                     a{
                     color: $text-dark;
                     padding: 0 5px;

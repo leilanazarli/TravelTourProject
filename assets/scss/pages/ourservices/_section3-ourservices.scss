@@ -1,0 +1,24 @@
+.ourservices-content{
+    background: url("../img/ourservices-img/section-bg-3\ \(1\).jpg");
+    @include backgroundImgFixed();
+    padding: 100px 0;
+    .container{
+        .row{
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+           .col{
+            margin-bottom: 40px;
+            h5{
+                margin: 20px 0;
+                font-weight: 700;
+                font-size: 25px
+                }
+                p{
+                    line-height: 25px;
+                    font-weight: 400;
+                }
+           }
+        }
+        
+    }
+}

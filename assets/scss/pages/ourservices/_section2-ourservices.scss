@@ -1,0 +1,39 @@
+.ourservices-about{
+    .container{
+    p{
+        color: #8f8f8f;
+        line-height: 25px;
+        
+    }
+        .aboutus{
+            .aboutus-left{
+                background: url("../img/ourservices-img/shutterstock_210601591.jpg");
+                @include backgroundImgFixed();
+            }
+            .aboutus-right{
+                padding: 120px 0 120px 50px;
+                @include onlyFlexColumn();
+            }
+        }
+        .missions{
+            .missions-left{
+                padding: 120px 50px 120px 0;
+                @include onlyFlexColumn();
+            }
+            .missions-right{
+                background: url("../img/ourservices-img/shutterstock_147744218.jpg");
+                @include backgroundImgFixed();
+            }
+        }
+        .solutions{
+            .solutions-left{
+                background: url("../img/ourservices-img/shutterstock_220323652.jpg");
+                @include backgroundImgFixed();
+            }
+            .solutions-right{
+                padding: 120px 0 120px 50px;
+                @include onlyFlexColumn();
+            }
+        }
+    }
+}
