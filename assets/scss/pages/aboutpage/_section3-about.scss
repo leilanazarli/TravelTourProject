@@ -1,5 +1,52 @@
 .about-team{
+    background-color: rgb(240,240,240);
     .container{
+        font-family: $font-poppins;
         padding: 100px 0;
+        h1{
+            font-size: 45px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .row{
+            .col{
+                margin-bottom: 50px;
+                .card{
+                    border-color: rgb(240,240,240);
+                    &:hover{
+                        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+                        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+                        .card-img{
+                            overflow: hidden;
+                            img{
+                                transform: scale(1.2);
+                                }
+                        }
+                    }
+                    .card-img{
+                        width: 100%;
+                        img{
+                            background-color: rgba(0, 0, 0, 0.5);
+                        width: 100%;
+                        }
+                    }
+                    .card-body{
+                    border-color: none;
+                    background-color: white;
+                    @include flexColumn();
+                        a{
+                            font-size: 20px;
+                            color: black;
+                            font-style: italic;
+                        }
+                        p{
+                           font-size: 15px;
+                           color: grey;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
