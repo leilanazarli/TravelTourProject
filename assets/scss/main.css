@@ -149,7 +149,7 @@ table {
   padding: 0;
 }
 
-.home-sec3 .home-sec3-top .container button, .home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col .learnmore {
+.tourfulllist-search .container .search-content button, .home-sec3 .home-sec3-top .container button, .home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col .learnmore {
   padding: 20px 32px;
   font-size: 13px;
   color: white;
@@ -158,7 +158,7 @@ table {
   font-family: "Roboto", sans-serif;
   background-color: #4692e7;
 }
-.home-sec3 .home-sec3-top .container button:hover, .home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col .learnmore:hover {
+.tourfulllist-search .container .search-content button:hover, .home-sec3 .home-sec3-top .container button:hover, .home-sec1 .carousel .carousel-inner .carousel-item .carousel-caption .row .col .learnmore:hover {
   background-color: #0693e3;
 }
 
@@ -407,11 +407,9 @@ header > .dropdown-toggle:active {
 }
 .home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 10px;
+  padding: 30px 20px;
   border: none;
 }
 .home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body .about {
@@ -419,10 +417,41 @@ header > .dropdown-toggle:active {
   justify-content: space-between;
   align-items: center;
 }
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body .about a {
+  color: black;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body .about .price p {
+  color: #5f5f5f;
+  margin-left: 30px;
+  text-decoration-line: line-through;
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body .about .price h1 {
+  font-size: 28px;
+  color: #467fe7;
+  font-weight: 900;
+}
 .home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body .time {
   display: flex;
   justify-content: left;
   align-items: center;
+  gap: 10px;
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body .time i {
+  color: rgb(68, 68, 221);
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body .time p {
+  color: #5f5f5f;
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body .star-icon {
+  display: flex;
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body .star-icon i {
+  color: orange;
+}
+.home-sec3 .home-sec3-bottom .home-sec3-bottom-card .row .owl-slider .owl-carousel .item .card .card-body .star-icon p {
+  color: #8f8f8f;
 }
 
 .home-sec4 {
@@ -1323,6 +1352,218 @@ header > .dropdown-toggle:active {
   box-shadow: 0.1em 0.1em 0.6em 0.2em #203191;
   right: 0.3em;
   transition: all 0.3s;
+}
+
+.contact-traveltour-page {
+  background: url("../img/about-img/page-title-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 250px 0;
+}
+.contact-traveltour-page h1 {
+  color: white;
+  font-size: 43px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+}
+.contact-traveltour-page p {
+  color: white;
+  margin-top: 30px;
+  font-size: 33px;
+  font-weight: 900;
+  font-family: "Dancing Script", cursive;
+}
+
+.waysOfCommunaction .container {
+  padding: 50px 0;
+}
+.waysOfCommunaction .container .row .col {
+  flex-direction: column;
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  justify-content: center;
+}
+.waysOfCommunaction .container .row .col i {
+  font-size: 25px;
+}
+.waysOfCommunaction .container .row .col h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+.waysOfCommunaction .container .row .col p {
+  color: #8f8f8f;
+  line-height: 25px;
+}
+.waysOfCommunaction .container .row .col a:hover {
+  color: rgb(51, 51, 161);
+  font-weight: 400;
+}
+
+.contact-form {
+  background: #f7f7f7;
+}
+.contact-form .container {
+  padding: 100px 0;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.contact-form .container h1 {
+  color: black;
+  font-size: 43px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.contact-form .container p {
+  text-align: center;
+  color: #8f8f8f;
+  font-size: 33px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 900;
+}
+.contact-form .container .contact-line {
+  width: 50px;
+  height: 2px;
+  background-color: black;
+}
+.contact-form .container form {
+  width: 100%;
+}
+.contact-form .container form .col-8 {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.contact-icon {
+  padding: 50px 0;
+}
+.contact-icon .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-icon .container .icon {
+  display: flex;
+  height: 30px;
+  width: 270px;
+}
+.contact-icon .container .icon i {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  cursor: pointer;
+  transform: scale(1);
+}
+.contact-icon .container .icon .social-link1:hover, .contact-icon .container .icon .social-link2:hover, .contact-icon .container .icon .social-link3:hover, .contact-icon .container .icon .social-link4:hover {
+  animation: bounce_613 0.4s linear;
+}
+.contact-icon .container .icon .social-link1, .contact-icon .container .icon .social-link2, .contact-icon .container .icon .social-link3, .contact-icon .container .icon .social-link4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+}
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+  60% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tourfulllist-search {
+  background: url("../img/gallery-img/search-bg-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 170px 0;
+}
+.tourfulllist-search .container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.tourfulllist-search .container .search-title {
+  display: flex;
+  gap: 20px;
+}
+.tourfulllist-search .container .search-title h1 {
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+}
+.tourfulllist-search .container .search-title i {
+  color: white;
+  font-size: 25px;
+}
+.tourfulllist-search .container .search-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.tourfulllist-search .container .search-content .form-select, .tourfulllist-search .container .search-content .form-control, .tourfulllist-search .container .search-content span {
+  background-color: white;
+  border-radius: 0;
+  border-color: white;
+  box-shadow: none;
+  margin: 0;
+  color: #ccd5e8;
+  font-family: "Roboto", sans-serif;
+}
+.tourfulllist-search .container .search-content label {
+  color: white;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+.tourfulllist-search .container .search-content button {
+  padding: 11px;
+  margin-top: 35px;
+}
+.tourfulllist-search .container .search-content .keywords .input-group span {
+  border-left: none;
+}
+.tourfulllist-search .container .search-content .keywords .input-group input {
+  border-right: none;
 }
 
 footer .footer-top {

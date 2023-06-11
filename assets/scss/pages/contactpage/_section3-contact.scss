@@ -1,0 +1,33 @@
+.contact-form{
+    background: #f7f7f7 ;
+    .container{
+        padding: 100px 0;
+        @include flexColumn();
+        gap: 30px;
+        h1{
+            color: black; 
+            font-size: 43px;
+            font-weight: 500;
+            font-family: $font-poppins;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            color: #8f8f8f; 
+            font-size: 33px;
+            font-family: $font-dancing;
+            font-weight: 900;
+        }
+        .contact-line{
+            width: 50px;
+            height: 2px;
+            background-color: black;
+        }
+        form{
+        width: 100%;
+            .col-8{
+                @include onlyFlexColumn();
+            }
+        }
+    }
+}

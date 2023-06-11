@@ -1,3 +1,44 @@
+let carousel=document.querySelector(".owl-carousel")
+let BASE_URL="http://localhost:8000/tours"
+
+async function getTours(){
+carousel.innerHTML=""
+  let res=await axios(BASE_URL)
+  let data=res.data
+  console.log(data);
+  data.forEach(element => {
+    carousel.innerHTML+=`
+    <div class="item">
+                    <div class="card">
+                      <img src="./assets/img/home-img/${element.img}" alt="1000X1000">
+                      <div class="card-body">
+                      <div class="about">
+                        <a href="">AMERICA - 2 DAYS IN LAKE TAHOE</a>
+                        <div class="price">
+                        <p>$2,300</p>
+                        <h1>$3,500</h1>
+                        </div>
+                      </div>
+                      <div class="time">
+                        <i class="fa-regular  fa-clock"></i>
+                        <p> 8 Hours</p>
+                      </div>
+                      <div class="star-icon">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                      <p>(6 Reviews)</p>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+    `
+  });
+}
+// getTours();
+
 jQuery("#carousel").owlCarousel({
     autoplay: true,
     rewind: true, /* use rewind if you don't want loop */
@@ -29,4 +70,8 @@ jQuery("#carousel").owlCarousel({
         items: 4
       }
     }
+    
   });
+  
+ 
+ 

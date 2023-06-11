@@ -1,0 +1,32 @@
+.waysOfCommunaction{
+    .container{
+    padding: 50px 0;
+        .row{
+            .col{
+                flex-direction: column;
+                display: flex;
+                gap: 20px;
+                align-items: start;
+                justify-content: center;
+                i{
+                    font-size: 25px;
+                }
+                h4{
+                    font-family: $font-poppins;
+                    font-size: 25px;
+                    font-weight: 500;
+                }
+                p{
+                    color: #8f8f8f;
+                    line-height: 25px;
+                }
+                a{
+                    &:hover{
+                        color: rgb(51, 51, 161);
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

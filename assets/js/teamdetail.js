@@ -109,3 +109,7 @@ async function getDetailAbout(){
     `
     }
     getDetailContact()
+    
+    
+    
+    

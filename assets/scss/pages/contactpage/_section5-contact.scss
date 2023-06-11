@@ -1,0 +1,60 @@
+.contact-icon{
+padding: 50px 0;
+   .container{
+       @include flexCenter();
+    .icon {
+        display: flex;
+        height: 30px;
+        width: 270px;
+        i {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            height: 100%;
+            font-size: 24px;
+            font-weight: 700;
+            opacity: 1;
+            transition: opacity 0.25s;
+            z-index: 2;
+            cursor: pointer;
+            transform: scale(1);
+        }
+        .social-link1,  .social-link2,.social-link3 , .social-link4  {
+            &:hover {
+                animation: bounce_613 0.4s linear;
+            }
+        }
+    }
+    .icon .social-link1,.icon .social-link2,.icon .social-link3,.icon .social-link4 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        color: black;
+        font-size: 24px;
+        text-decoration: none;
+        transition: 0.25s;
+        border-radius: 50px;
+    }
+    @keyframes bounce_613 {
+        40% {
+          transform: scale(1.4);
+        }
+      
+        60% {
+          transform: scale(0.8);
+        }
+      
+        80% {
+          transform: scale(1.2);
+        }
+      
+        100% {
+          transform: scale(1);
+        }
+      }
+   }
+}

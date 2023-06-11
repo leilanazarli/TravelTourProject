@@ -1,0 +1,58 @@
+.tourfulllist-search{
+    background:url("../img/gallery-img/search-bg-2.jpg") ;
+    @include backgroundImgFixed();
+    padding: 170px 0;
+    .container{
+        @include onlyFlexColumn();
+        .search-title{
+            display: flex;
+            gap: 20px;
+            h1{
+                color: white; 
+                font-size: 25px;
+                font-weight: 900;
+                font-family: $font-poppins;
+                }
+                i{
+                    color: white; 
+                font-size: 25px;
+                }
+        }
+        .search-content{
+            @include flexCenter();
+            gap: 20px;
+            .form-select ,.form-control ,span{
+            background-color: white;
+            border-radius: 0;
+            border-color: white;
+            box-shadow: none;
+            margin: 0;
+            color: #ccd5e8;
+            font-family: $font-roboto;
+            }
+            label{
+             color: white;
+             margin-bottom: 20px;
+             font-family: $font-poppins;
+             font-weight: 700;
+             font-size: 14px;
+            }
+            button{
+                @extend %button-square ;
+                padding: 11px ;
+                margin-top: 35px;
+            }
+            .keywords{
+                .input-group{
+                    span{
+                    border-left: none;
+                    }
+                    input{
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+
+}

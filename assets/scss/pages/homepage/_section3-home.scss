@@ -39,7 +39,6 @@ background-size: cover;
                         border-right: none;
                     }
                 }
-            
             }
         }
     }
@@ -73,14 +72,47 @@ background-size: cover;
                             border-radius: 0;
                             border: none;
                                 .card-body{
-                                    @include  flexColumn();
-                                    padding: 30px 10px;
+                                    @include  onlyFlexColumn();
+                                    padding: 30px 20px;
                                     border: none;
                                     .about{
                                         @include flexSpaceBetween();
+                                        a{
+                                            color: black;
+                                            font-weight: 900;
+                                            font-family: $font-poppins;
+                                        }
+                                        .price{
+                                        p{
+                                            color: #5f5f5f;
+                                            margin-left: 30px;
+                                            text-decoration-line: line-through;
+                                        }
+                                        h1{
+                                            font-size: 28px;
+                                            color: $text-dark;
+                                            font-weight: 900;
+                                        }
+                                    }
                                     }
                                     .time{
                                         @include flexLeft();
+                                        gap: 10px;
+                                        i{
+                                            color: rgb(68, 68, 221);
+                                        }
+                                        p{
+                                            color: #5f5f5f;
+                                        }
+                                    }
+                                    .star-icon{
+                                    display: flex;
+                                        i{
+                                            color: orange;
+                                        }
+                                        p{
+                                            color: #8f8f8f;
+                                        }
                                     }
                                 }
                             }
