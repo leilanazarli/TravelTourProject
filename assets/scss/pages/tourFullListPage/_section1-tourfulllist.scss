@@ -1,4 +1,4 @@
-.tourfulllist-search{
+.tourFullList-search{
     background:url("../img/gallery-img/search-bg-2.jpg") ;
     @include backgroundImgFixed();
     padding: 170px 0;
@@ -14,7 +14,7 @@
                 font-family: $font-poppins;
                 }
                 i{
-                    color: white; 
+                    color: #8f8f8f; 
                 font-size: 25px;
                 }
         }
