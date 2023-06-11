@@ -35,6 +35,13 @@ z-index: 3;
             @include flexSpaceBetween();
             padding: 35px 5px;
             nav{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            .fa-bars , .fa-xmark{
+                display: none;
+                color: white;
+            }
                 .allUl{
                 @include flexGap() ;
                 li{
@@ -93,3 +100,37 @@ z-index: 3;
             }
         }
 }
+
+
+@media screen and (max-width: 991px) {
+    header{
+        .header-bottom {
+            .container{
+                .nav{
+                    .fa-bars , .fa-xmark{
+                        display: flex;
+                    }
+                    .allUl{
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    header{
+        .header-bottom {
+            .container{
+                .nav{
+                    .fa-bars , .fa-xmark{
+                        display: flex;
+                    }
+                    .allUl{
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+  }

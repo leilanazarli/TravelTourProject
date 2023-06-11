@@ -209,6 +209,15 @@ header .header-bottom .container {
   align-items: center;
   padding: 35px 5px;
 }
+header .header-bottom .container nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+header .header-bottom .container nav .fa-bars, header .header-bottom .container nav .fa-xmark {
+  display: none;
+  color: white;
+}
 header .header-bottom .container nav .allUl {
   display: flex;
   gap: 20px;
@@ -256,6 +265,22 @@ header > .dropdown-toggle:active {
   pointer-events: none;
 }
 
+@media screen and (max-width: 991px) {
+  header .header-bottom .container .nav .fa-bars, header .header-bottom .container .nav .fa-xmark {
+    display: flex;
+  }
+  header .header-bottom .container .nav .allUl {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  header .header-bottom .container .nav .fa-bars, header .header-bottom .container .nav .fa-xmark {
+    display: flex;
+  }
+  header .header-bottom .container .nav .allUl {
+    display: none !important;
+  }
+}
 .home-sec1 .carousel .carousel-inner .carousel-item {
   animation: fadeIn 3s;
 }
