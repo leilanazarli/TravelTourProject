@@ -1,21 +1,23 @@
-let row = document.querySelector(".data")
-let BASE_URL=""
+let paginatedList = document.querySelector(".data")
+let BASE_URL="http://localhost:8000/tours"
 
+let data
 async function getData(){
-let res=await axios(BASE_URL)
-let data=res.data
+    paginatedList.innerHTML=""
+let res=await axios(BASE_URL);
+data=res.data
 data.forEach(element => {
-    row.innerHTML+=`
-    <div class="carda">
+    paginatedList.innerHTML+=`
+    <div class="cardaa">
     <div class="carda-img">
-    <img src="./assets/img/gallery-img/wallpaperflare.com_wallpaper (10).jpg" alt="">
+    <img src="./assets/img/home-img/${element.img}" alt="">
     </div>
     <div class="carda-body">
     <div class="carda-body-left">
         <a href="">${element.shortinfo}</a>
         <p><i class="fa-regular fa-clock"></i>${element.day}</p>
         <p><i class="fa-solid fa-calendar-days"></i>Availability:${element.Availability}</p>
-        <p>${element.TourDetails.slice(0,48)}</p>
+        <p>${element.TourDetails.slice(0,160)}[...]</p>
     </div>
     <div class="carda-body-right">
         <p>From</p>
@@ -36,5 +38,106 @@ data.forEach(element => {
     </div>
     `
 });
-
 }
+getData()
+const paginationNumbers = document.getElementById("pagination-numbers");
+// const paginatedList = document.querySelector(".data");
+const listItems = document.querySelectorAll(".cardaa");
+const nextButton = document.getElementById("next-button");
+const prevButton = document.getElementById("prev-button");
+
+console.log(listItems.length);
+const paginationLimit = 2;
+const pageCount = Math.ceil(listItems.length / paginationLimit);
+let currentPage = 1;
+
+const disableButton = (button) => {
+  button.classList.add("disabled");
+  button.setAttribute("disabled", true);
+};
+
+const enableButton = (button) => {
+  button.classList.remove("disabled");
+  button.removeAttribute("disabled");
+};
+
+const handlePageButtonsStatus = () => {
+  if (currentPage === 1) {
+//   listItems.slice(0,2)
+    disableButton(prevButton);
+  } else {
+    enableButton(prevButton);
+  }
+
+  if (pageCount === currentPage) {
+    disableButton(nextButton);
+  } else {
+    enableButton(nextButton);
+  }
+};
+
+const handleActivePageNumber = () => {
+  document.querySelectorAll(".pagination-number").forEach((button) => {
+    button.classList.remove("active");
+    const pageIndex = Number(button.getAttribute("page-index"));
+    if (pageIndex == currentPage) {
+      button.classList.add("active");
+    }
+  });
+};
+
+const appendPageNumber = (index) => {
+  const pageNumber = document.createElement("button");
+  pageNumber.className = "pagination-number";
+  pageNumber.innerHTML = index;
+  pageNumber.setAttribute("page-index", index);
+  pageNumber.setAttribute("aria-label", "Page " + index);
+
+  paginationNumbers.appendChild(pageNumber);
+};
+
+const getPaginationNumbers = () => {
+  for (let i = 1; i <= pageCount; i++) {
+    appendPageNumber(i);
+  }
+};
+
+const setCurrentPage = (pageNum) => {
+  currentPage = pageNum;
+
+  handleActivePageNumber();
+  handlePageButtonsStatus();
+  
+  const prevRange = (pageNum - 1) * paginationLimit;
+  const currRange = pageNum * paginationLimit;
+
+  listItems.forEach((item, index) => {
+    item.classList.add("hidden");
+    if (index >= prevRange && index < currRange) {
+      item.classList.remove("hidden");
+    }
+  });
+};
+
+window.addEventListener("load", () => {
+  getPaginationNumbers();
+  setCurrentPage(1);
+
+  prevButton.addEventListener("click", () => {
+    setCurrentPage(currentPage - 1);
+  });
+
+  nextButton.addEventListener("click", () => {
+    setCurrentPage(currentPage + 1);
+  });
+
+  document.querySelectorAll(".pagination-number").forEach((button) => {
+    const pageIndex = Number(button.getAttribute("page-index"));
+
+    if (pageIndex) {
+      button.addEventListener("click", () => {
+        setCurrentPage(pageIndex);
+      });
+    }
+  });
+});
