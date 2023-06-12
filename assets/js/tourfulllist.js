@@ -1,14 +1,17 @@
 let paginatedList = document.querySelector(".data")
-let BASE_URL="http://localhost:8000/tours"
+let toursData= document.querySelector(".tours-data")
+let articles= document.querySelector(".recent-articles-row")
+let BASE_URL="http://localhost:8000"
+// let BASE_URL="http://localhost:8000/tours"
 
-let data
+
 async function getData(){
     paginatedList.innerHTML=""
-let res=await axios(BASE_URL);
-data=res.data
+let res=await axios(`${BASE_URL}/tours`);
+let data=res.data
 data.forEach(element => {
     paginatedList.innerHTML+=`
-    <div class="cardaa">
+    <div class="sidebar-carda">
     <div class="carda-img">
     <img src="./assets/img/home-img/${element.img}" alt="">
     </div>
@@ -40,9 +43,48 @@ data.forEach(element => {
 });
 }
 getData()
+
+async function getLatestTours(){
+  toursData.innerHTML=""
+let res=await axios(`${BASE_URL}/tours`);
+let data=res.data
+data.forEach(element => {
+  toursData.innerHTML+=`
+    <div class="tour-widget mb-2">
+    <img src="./assets/img/home-img/${element.img}" alt="" width="70px">
+  <div class="tour-widget-right">
+    <a>${element.shortinfo}</a>
+    <p>From</p><h6>${element.price}$</h6>
+  </div>
+  </div>
+    `
+});
+}
+getLatestTours()
+
+async function getRecentArticles(){
+  articles.innerHTML=""
+let res=await axios(`${BASE_URL}/articles`);
+let data=res.data
+data.forEach(element => {
+  articles.innerHTML+=`
+  <div class="recent-articles-content">
+  <img src="./assets/img/gallery-img/${element.img}" alt="" width="70px">
+  <div class="recent-articles-right">
+    <a>${element.articleName}</a>
+    <div class="recent-articles-right-text">
+      <i class="fa-regular fa-clock "></i><p>${element.date}</p>
+      <i class="fa-solid fa-file-invoice "></i><p>${element.writer}</p>
+    </div>
+    </div>
+</div>
+    `
+});
+}
+getRecentArticles()
 const paginationNumbers = document.getElementById("pagination-numbers");
 // const paginatedList = document.querySelector(".data");
-const listItems = document.querySelectorAll(".cardaa");
+const listItems = document.querySelectorAll(".sidebar-carda");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 
