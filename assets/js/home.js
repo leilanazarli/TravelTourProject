@@ -73,7 +73,7 @@ async function getTours(){
         </div> `
   });
 }
-getTours();
+// getTours();
 
 
 
