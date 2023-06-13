@@ -30,36 +30,39 @@
             width: 23.5%;
                 .carda{
                     position: relative;
-                    transition: 0.4s ease-out;
+                    transition: 1s;
                     &:hover{
                         .carda-body{
-                            display: flex;
+                        display: flex;
                             background-color: rgba($color: #000000, $alpha: .4);
+                            a{
+                                color: white;
+                            }
                         }
                         .img{
-                            // transition: 0.7s ;
                             img{
                                 transform: scale(1.3);
                             }
                         }
                     }
                     .img{
-                        // transition: 0.4s ease-out;
+                        transition: 0.7s ;
                         overflow: hidden;
                     img{
+                        transition: 0.7s ;
                         width: 100%;
                             }
                     }
                     .carda-body{
-                        // transition: 0.4s ease-out;
+                        transition: 0.7s ;
                         top: 0;
                         position: absolute;
                         @include flexCenter();
-                        display: none;
                         width: 100%;
                         height: 100%;
                         a{
-                            color: white;
+                            transition: 0.7s ;
+                            color: transparent;
                             text-align: center;
                         }
                     }

@@ -3,15 +3,17 @@ let toursData = document.querySelector(".tours-data");
 let articles = document.querySelector(".recent-articles-row");
 let BASE_URL = "http://localhost:8000";
 // let BASE_URL="http://localhost:8000/tours"
-const copyData = [];
-
+let allData=[]
+let num=3
+let fav=[]
 async function getData() {
   paginatedList.innerHTML = "";
   let res = await axios(`${BASE_URL}/tours`);
   let data = res.data;
-  copyData = data;
-
-  copyData.forEach((element) => {
+  allData=data
+  console.log(data);
+  fav=fav.length ?fav.slice(0,num) :data.slice(0,num)
+  fav.forEach((element) => {
     paginatedList.innerHTML += `
     <div class="sidebar-carda">
     <div class="carda-img">
@@ -47,6 +49,13 @@ async function getData() {
   });
 }
 getData();
+
+let loadmore=document.querySelector(".loadmore")
+loadmore.addEventListener("click" , function(){
+  num=num+3
+  fav=allData
+  getData()
+})
 
 async function getLatestTours() {
   toursData.innerHTML = "";
@@ -86,106 +95,106 @@ async function getRecentArticles() {
   });
 }
 getRecentArticles();
-const paginationNumbers = document.getElementById("pagination-numbers");
-// const paginatedList = document.querySelector(".data");
-const listItems = document.querySelectorAll(".sidebar-carda");
-const nextButton = document.getElementById("next-button");
-const prevButton = document.getElementById("prev-button");
+// const paginationNumbers = document.getElementById("pagination-numbers");
+// // const paginatedList = document.querySelector(".data");
+// const listItems = document.querySelectorAll(".sidebar-carda");
+// const nextButton = document.getElementById("next-button");
+// const prevButton = document.getElementById("prev-button");
 
-console.log(listItems.length);
-const paginationLimit = 2;
-const pageCount = Math.ceil(listItems.length / paginationLimit);
-let currentPage = 1;
+// console.log(listItems.length);
+// const paginationLimit = 2;
+// const pageCount = Math.ceil(listItems.length / paginationLimit);
+// let currentPage = 1;
 
-const disableButton = (button) => {
-  button.classList.add("disabled");
-  button.setAttribute("disabled", true);
-};
+// const disableButton = (button) => {
+//   button.classList.add("disabled");
+//   button.setAttribute("disabled", true);
+// };
 
-const enableButton = (button) => {
-  button.classList.remove("disabled");
-  button.removeAttribute("disabled");
-};
+// const enableButton = (button) => {
+//   button.classList.remove("disabled");
+//   button.removeAttribute("disabled");
+// };
 
-const handlePageButtonsStatus = () => {
-  if (currentPage === 1) {
-    //   listItems.slice(0,2)
-    disableButton(prevButton);
-  } else {
-    enableButton(prevButton);
-  }
+// const handlePageButtonsStatus = () => {
+//   if (currentPage === 1) {
+//     //   listItems.slice(0,2)
+//     disableButton(prevButton);
+//   } else {
+//     enableButton(prevButton);
+//   }
 
-  if (pageCount === currentPage) {
-    disableButton(nextButton);
-  } else {
-    enableButton(nextButton);
-  }
-};
+//   if (pageCount === currentPage) {
+//     disableButton(nextButton);
+//   } else {
+//     enableButton(nextButton);
+//   }
+// };
 
-const handleActivePageNumber = () => {
-  document.querySelectorAll(".pagination-number").forEach((button) => {
-    button.classList.remove("active");
-    const pageIndex = Number(button.getAttribute("page-index"));
-    if (pageIndex == currentPage) {
-      button.classList.add("active");
-    }
-  });
-};
+// const handleActivePageNumber = () => {
+//   document.querySelectorAll(".pagination-number").forEach((button) => {
+//     button.classList.remove("active");
+//     const pageIndex = Number(button.getAttribute("page-index"));
+//     if (pageIndex == currentPage) {
+//       button.classList.add("active");
+//     }
+//   });
+// };
 
-const appendPageNumber = (index) => {
-  const pageNumber = document.createElement("button");
-  pageNumber.className = "pagination-number";
-  pageNumber.innerHTML = index;
-  pageNumber.setAttribute("page-index", index);
-  pageNumber.setAttribute("aria-label", "Page " + index);
+// const appendPageNumber = (index) => {
+//   const pageNumber = document.createElement("button");
+//   pageNumber.className = "pagination-number";
+//   pageNumber.innerHTML = index;
+//   pageNumber.setAttribute("page-index", index);
+//   pageNumber.setAttribute("aria-label", "Page " + index);
 
-  paginationNumbers.appendChild(pageNumber);
-};
+//   paginationNumbers.appendChild(pageNumber);
+// };
 
-const getPaginationNumbers = () => {
-  for (let i = 1; i <= pageCount; i++) {
-    appendPageNumber(i);
-  }
-};
+// const getPaginationNumbers = () => {
+//   for (let i = 1; i <= pageCount; i++) {
+//     appendPageNumber(i);
+//   }
+// };
 
-const setCurrentPage = (pageNum) => {
-  currentPage = pageNum;
+// const setCurrentPage = (pageNum) => {
+//   currentPage = pageNum;
 
-  handleActivePageNumber();
-  handlePageButtonsStatus();
+//   handleActivePageNumber();
+//   handlePageButtonsStatus();
 
-  const prevRange = (pageNum - 1) * paginationLimit;
-  const currRange = pageNum * paginationLimit;
+//   const prevRange = (pageNum - 1) * paginationLimit;
+//   const currRange = pageNum * paginationLimit;
 
-  listItems.forEach((item, index) => {
-    item.classList.add("hidden");
-    if (index >= prevRange && index < currRange) {
-      item.classList.remove("hidden");
-    }
-  });
-};
+//   listItems.forEach((item, index) => {
+//     item.classList.add("hidden");
+//     if (index >= prevRange && index < currRange) {
+//       item.classList.remove("hidden");
+//     }
+//   });
+// };
 
-window.addEventListener("load", () => {
-  getPaginationNumbers();
-  setCurrentPage(1);
+// window.addEventListener("load", () => {
+//   getPaginationNumbers();
+//   setCurrentPage(1);
 
-  prevButton.addEventListener("click", () => {
-    setCurrentPage(currentPage - 1);
-  });
+//   prevButton.addEventListener("click", () => {
+//     setCurrentPage(currentPage - 1);
+//   });
 
-  nextButton.addEventListener("click", () => {
-    setCurrentPage(currentPage + 1);
-   copyData=copyData.slice()
-    getData();
-  });
+//   nextButton.addEventListener("click", () => {
+//     setCurrentPage(currentPage + 1);
+//   //  copyData=copyData.slice(0,3)
+//     // getData();
+//   });
 
-  document.querySelectorAll(".pagination-number").forEach((button) => {
-    const pageIndex = Number(button.getAttribute("page-index"));
+//   document.querySelectorAll(".pagination-number").forEach((button) => {
+//     const pageIndex = Number(button.getAttribute("page-index"));
 
-    if (pageIndex) {
-      button.addEventListener("click", () => {
-        setCurrentPage(pageIndex);
-      });
-    }
-  });
-});
+//     if (pageIndex) {
+//       button.addEventListener("click", () => {
+//         setCurrentPage(pageIndex);
+//       });
+//     }
+//   });
+// });

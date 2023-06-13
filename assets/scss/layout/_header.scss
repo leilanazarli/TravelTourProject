@@ -104,18 +104,20 @@ z-index: 3;
 
 
 
-// @media screen and (max-width: 991px) {
-//     header{
-//         .header-bottom {
-//             .container{
-//                 nav{
-//                     .fa-bars , .fa-xmark{
-//                         display: flex;
-//                     }
-                  
+@media screen and (max-width: 991px) {
+    header{
+        .header-bottom {
+            .container{
+                nav{
+                    .fa-bars , .fa-xmark{
+                        display: flex;
+                    }
+                  .allUl{
+                  display: none;
+                  }
                    
-//                 }
-//             }
-//         }
-//     }
-//   }
+                }
+            }
+        }
+    }
+  }
