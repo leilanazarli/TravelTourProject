@@ -265,22 +265,6 @@ header > .dropdown-toggle:active {
   pointer-events: none;
 }
 
-@media screen and (max-width: 991px) {
-  header .header-bottom .container .nav .fa-bars, header .header-bottom .container .nav .fa-xmark {
-    display: flex;
-  }
-  header .header-bottom .container .nav .allUl {
-    display: none !important;
-  }
-}
-@media screen and (max-width: 992px) {
-  header .header-bottom .container nav .fa-bars, header .header-bottom .container nav .fa-xmark {
-    display: flex;
-  }
-  header .header-bottom .container nav .allUl {
-    display: none !important;
-  }
-}
 .home-sec1 .carousel .carousel-inner .carousel-item {
   animation: fadeIn 3s;
 }
@@ -852,6 +836,7 @@ header > .dropdown-toggle:active {
 }
 .home-sec7 .container .home-sec7-img .row .col .carda {
   position: relative;
+  transition: 0.4s ease-out;
 }
 .home-sec7 .container .home-sec7-img .row .col .carda:hover .carda-body {
   display: flex;

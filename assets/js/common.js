@@ -1,11 +1,20 @@
-let menuburger= document.querySelector(".fa-bars")
-let ul=document.querySelector(".allUl")
-menuburger.addEventListener("click" , function(){
-    ul.classList.toggle("show")
-    menuburger.classList.contains("fa-bars")
-    ?(this.classList="fa-solid fa-xmark")
-    :(this.classList="fa-solid fa-bars")
-})
+// let menuburger= document.querySelector(".fa-bars")
+// let ul=document.querySelector("ul")
+// menuburger.addEventListener("click" , function(){
+//     ul.classList.toggle("show")
+//     ul.classList.remove("allUl")
+//     menuburger.classList.contains("fa-bars")
+//     ?(this.classList="fa-solid fa-xmark")
+//     :(this.classList="fa-solid fa-bars" ,ul.classList.add("allUl"))
+// })
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
 
 const header_bottom = document.querySelector('.header-bottom')
 const header_top= document.querySelector('.header-top')
