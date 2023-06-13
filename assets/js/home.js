@@ -8,8 +8,8 @@ carousel.innerHTML=""
   console.log(data);
   data.forEach(element => {
     carousel.innerHTML+=`
-    <div class="item">
-                    <div class="card">
+    <div class="item ">
+                    <div class="card w-25">
                       <img src="./assets/img/home-img/${element.img}" alt="1000X1000">
                       <div class="card-body">
                       <div class="about">
@@ -73,3 +73,5 @@ jQuery("#carousel").owlCarousel({
     
   });
   
+
+

@@ -1,16 +1,18 @@
-let paginatedList = document.querySelector(".data")
-let toursData= document.querySelector(".tours-data")
-let articles= document.querySelector(".recent-articles-row")
-let BASE_URL="http://localhost:8000"
+let paginatedList = document.querySelector(".data");
+let toursData = document.querySelector(".tours-data");
+let articles = document.querySelector(".recent-articles-row");
+let BASE_URL = "http://localhost:8000";
 // let BASE_URL="http://localhost:8000/tours"
+const copyData = [];
 
+async function getData() {
+  paginatedList.innerHTML = "";
+  let res = await axios(`${BASE_URL}/tours`);
+  let data = res.data;
+  copyData = data;
 
-async function getData(){
-    paginatedList.innerHTML=""
-let res=await axios(`${BASE_URL}/tours`);
-let data=res.data
-data.forEach(element => {
-    paginatedList.innerHTML+=`
+  copyData.forEach((element) => {
+    paginatedList.innerHTML += `
     <div class="sidebar-carda">
     <div class="carda-img">
     <img src="./assets/img/home-img/${element.img}" alt="">
@@ -19,8 +21,10 @@ data.forEach(element => {
     <div class="carda-body-left">
         <a href="">${element.shortinfo}</a>
         <p><i class="fa-regular fa-clock"></i>${element.day}</p>
-        <p><i class="fa-solid fa-calendar-days"></i>Availability:${element.Availability}</p>
-        <p>${element.TourDetails.slice(0,160)}[...]</p>
+        <p><i class="fa-solid fa-calendar-days"></i>Availability:${
+          element.Availability
+        }</p>
+        <p>${element.TourDetails.slice(0, 160)}[...]</p>
     </div>
     <div class="carda-body-right">
         <p>From</p>
@@ -39,17 +43,17 @@ data.forEach(element => {
     </div>
     </div>
     </div>
-    `
-});
+    `;
+  });
 }
-getData()
+getData();
 
-async function getLatestTours(){
-  toursData.innerHTML=""
-let res=await axios(`${BASE_URL}/tours`);
-let data=res.data
-data.forEach(element => {
-  toursData.innerHTML+=`
+async function getLatestTours() {
+  toursData.innerHTML = "";
+  let res = await axios(`${BASE_URL}/tours`);
+  let data = res.data;
+  data.forEach((element) => {
+    toursData.innerHTML += `
     <div class="tour-widget mb-2">
     <img src="./assets/img/home-img/${element.img}" alt="" width="70px">
   <div class="tour-widget-right">
@@ -57,17 +61,17 @@ data.forEach(element => {
     <p>From</p><h6>${element.price}$</h6>
   </div>
   </div>
-    `
-});
+    `;
+  });
 }
-getLatestTours()
+getLatestTours();
 
-async function getRecentArticles(){
-  articles.innerHTML=""
-let res=await axios(`${BASE_URL}/articles`);
-let data=res.data
-data.forEach(element => {
-  articles.innerHTML+=`
+async function getRecentArticles() {
+  articles.innerHTML = "";
+  let res = await axios(`${BASE_URL}/articles`);
+  let data = res.data;
+  data.forEach((element) => {
+    articles.innerHTML += `
   <div class="recent-articles-content">
   <img src="./assets/img/gallery-img/${element.img}" alt="" width="70px">
   <div class="recent-articles-right">
@@ -78,10 +82,10 @@ data.forEach(element => {
     </div>
     </div>
 </div>
-    `
-});
+    `;
+  });
 }
-getRecentArticles()
+getRecentArticles();
 const paginationNumbers = document.getElementById("pagination-numbers");
 // const paginatedList = document.querySelector(".data");
 const listItems = document.querySelectorAll(".sidebar-carda");
@@ -105,7 +109,7 @@ const enableButton = (button) => {
 
 const handlePageButtonsStatus = () => {
   if (currentPage === 1) {
-//   listItems.slice(0,2)
+    //   listItems.slice(0,2)
     disableButton(prevButton);
   } else {
     enableButton(prevButton);
@@ -149,7 +153,7 @@ const setCurrentPage = (pageNum) => {
 
   handleActivePageNumber();
   handlePageButtonsStatus();
-  
+
   const prevRange = (pageNum - 1) * paginationLimit;
   const currRange = pageNum * paginationLimit;
 
@@ -171,6 +175,8 @@ window.addEventListener("load", () => {
 
   nextButton.addEventListener("click", () => {
     setCurrentPage(currentPage + 1);
+   copyData=copyData.slice()
+    getData();
   });
 
   document.querySelectorAll(".pagination-number").forEach((button) => {
