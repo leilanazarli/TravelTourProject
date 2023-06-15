@@ -305,7 +305,7 @@
     "tours":[
         {
           "id":1,
-          "price":3.500,
+          "price":"3.500",
           "img":"shitterstock-2.jpg",
           "fromCounrty":"San Francisco",
           "shortinfo":"Venecia - 2 DAYS IN LAKE TAHOE",
@@ -376,7 +376,7 @@
         ,
         {
           "id":1,
-          "price":3.500,
+          "price":"3.500",
           "img":"shutterstock_120562819-800x960.jpg",
           "fromCounrty":"San Francisco",
           "shortinfo":"AMERICA - 2 DAYS IN LAKE TAHOE",
@@ -448,7 +448,7 @@
         {
           "id":2,
           "img":"shutterstock_136984760-700x450.jpg",
-          "price":3.500,
+          "price":"3.500",
           "shortinfo":"Germany - 2 DAYS IN LAKE TAHOE",
           "fromCounrty":"Germany",
           "day":"5 Days",
@@ -519,7 +519,7 @@
           "id":3,
           "fromCounrty":"Canada",
           "img":"photodune-488847-venice-m-600x600.jpg",
-          "price":3.500,
+          "price":"3.500",
           "shortinfo":"Canada - 2 DAYS IN LAKE TAHOE",
           "day":"5 Days",
           "Availability":"Jan 16’ - Dec 16’",
@@ -589,7 +589,7 @@
           "id":4,
           "fromCounrty":"Italy",
           "img":"shutterstock_178807262-700x450.jpg",
-          "price":3.500,
+          "price":"3.500",
           "shortinfo":"Italy - 2 DAYS IN LAKE TAHOE",
           "day":"5 Days",
           "Availability":"Jan 16’ - Dec 16’",
@@ -660,7 +660,7 @@
           "fromCounrty":"America",
           "img":"wallpaperflare.com_wallpaper (4).jpg",
           "shortinfo":"America - 2 DAYS IN LAKE TAHOE",
-          "price":3.500,
+          "price":"3.500",
           "day":"5 Days",
           "Availability":"Jan 16’ - Dec 16’",
           "toCounrty":"Rome",

@@ -37,16 +37,16 @@ let BASE_URL="http://localhost:8000/tours"
 
 async function getTours(){
   let carousel=document.querySelector(".owl-stage")
-// carousel.innerHTML=""
+carousel.innerHTML="" 
   let res=await axios(BASE_URL)
   let data=res.data
   console.log(data);
   data.forEach(element => {
     carousel.innerHTML+=`
-    <div class="owl-item" style="width: 225.333px; margin-right: 10px;">
+    <div class="owl-item" style="width: 316.333px; margin-right: 10px;">
     <div class="item">
       <div class="card ">
-        <img src="./assets/img/home-img/${element.img}" alt="1000X1000">
+        <img src="./assets/img/home-img/${element.img}" style="height:200px" alt="1000X1000">
         <div class="card-body">
         <div class="about">
           <a href="">AMERICA - 2 DAYS IN LAKE TAHOE</a>
@@ -73,7 +73,9 @@ async function getTours(){
         </div> `
   });
 }
-// getTours();
+getTours();
+
+
 
 
 
