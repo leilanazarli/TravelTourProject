@@ -20,7 +20,7 @@ const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.l
 /*--------------------
 Items
 --------------------*/
-const $items = document.querySelectorAll('.carousel-item')
+const $items = document.querySelectorAll('.carousel-item-portfolio')
 const $cursors = document.querySelectorAll('.cursor')
 
 const displayItems = (item, index, active) => {

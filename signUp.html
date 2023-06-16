@@ -121,26 +121,27 @@
      <div class="row">
         <div class="col col-12 col-lg-6">
             <label for="">Username*</label>
-            <input class="form-control" type="text" class="form-control">
+            <input class="form-control" type="text" class="form-control" id="">
          </div>
          
-         <div class="col col-12 col-lg-6">
+         <div class="col col-12 col-lg-6 password">
             <label for="">Password*</label>
-            <input class="form-control" type="password" name="" id="">
+            <input class="form-control" type="password" name="" id="password">
+            <i id="pass-toggle-btn" class="fa-solid fa-eye"></i>
          </div>
          <div class="col col-12 col-lg-6">
             <label for="">First Name*</label>
-            <input class="form-control" type="text" name="" id="">
+            <input class="form-control" type="text" name="" id="fullname">
          </div>
          <div  class="col col-12 col-lg-6">
             <label for="">Birth Date*</label>
                 <div class="row">
-                <div class="col-4">
+                <div class="col-4 date ">
                     <select class="form-select " name="yearpicker" id="yearpicker">
                         <option value='' selected disabled>Year</option>
                     </select >
                 </div>
-                <div class="col-4">
+                <div class="col-4 date">
                 <select class="form-select " name=month value=''>Select Month</option>
                     <option value='' selected disabled>Month</option>
                     <option value='01'>January</option>
@@ -157,7 +158,7 @@
                     <option value='12'>December</option>
                     </select>
                     </div>
-                <div class="col-4">
+                <div class="col-4 date">
                 <select class="form-select " name=dt >
                     <option value='' selected disabled>Date</option>
                     <option value='01'>01</option>

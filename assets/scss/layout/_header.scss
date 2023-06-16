@@ -76,6 +76,8 @@ z-index: 3;
         display: none;
     }
     .drop{
+        
+    
         &:hover{
              .dropdown-menu {
                         display: block;
@@ -97,7 +99,7 @@ z-index: 3;
                     }
                 }
                 .dropdown-menu{
-                    top: 100px;
+                    top: 200px;
                     background-color: rgb(46, 46, 46);
                     display: none;
     //                 transform: translateY(50px);

@@ -9,12 +9,14 @@ font-family:    $font-poppins;
         padding:50px 30px;
         background-color: #fff;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      
             form {
                 position: relative;
                 margin-top: 16px;
                 background-color: #fff;
                 overflow: hidden;
                 @include onlyFlexColumn();
+               
                 .uploadImg{
                     img{
                         border-radius: 50%;
@@ -117,4 +119,18 @@ font-family:    $font-poppins;
             }
         }
     }
-
+    .password{
+        position: relative;
+        .fa-eye{
+            position: absolute !important;
+            right: 0px;
+            height: 45px;
+            top: 65px;
+            font-size: 13px;
+            right: 10px;
+            width: 45px;
+            cursor: pointer;
+            color: #939393;
+            text-align: center;
+        }
+    }

@@ -8,8 +8,8 @@ async function getData(){
  console.log(data);
  data.forEach(element => {
     cards.innerHTML+=`
-        <div class="col col-12 col-lg-4 col-md-6">
-        <div class="card">
+        <div class="col col-12 col-lg-4 col-md-6" >
+        <div class="card" data-aos="flip-down">
         <div class="card-img">
         <img src="./assets/img/about-img/${element.image}" alt="">
         </div>
