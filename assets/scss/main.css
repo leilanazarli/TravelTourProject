@@ -1978,7 +1978,7 @@ header .header-bottom .container nav .allUl li .allA:hover::before {
 }
 
 .loginpage .container {
-  padding: 100px 0;
+  padding: 50px 0 100px 0;
 }
 .loginpage .container .form_container {
   width: 100%;
@@ -1992,15 +1992,6 @@ header .header-bottom .container nav .allUl li .allA:hover::before {
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
   border-radius: 11px;
   font-family: "Inter", sans-serif;
-}
-.loginpage .container .logo_container {
-  box-sizing: border-box;
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(180deg, rgba(248, 248, 248, 0) 50%, rgba(248, 248, 248, 0.5333333333) 100%);
-  border: 1px solid #F7F7F8;
-  filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
-  border-radius: 11px;
 }
 .loginpage .container .title_container {
   display: flex;
@@ -2117,6 +2108,149 @@ header .header-bottom .container nav .allUl li .allA:hover::before {
   font-size: 0.75rem;
   color: #8B8E98;
   text-decoration: underline;
+}
+
+.signUpPage-title {
+  background: url("../img/about-img/page-title-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 180px 0;
+}
+.signUpPage-title h1 {
+  color: white;
+  font-size: 43px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+}
+.signUpPage-title p {
+  color: white;
+  margin-top: 30px;
+  font-size: 33px;
+  font-weight: 900;
+  font-family: "Dancing Script", cursive;
+}
+
+.signUpPage {
+  padding: 90px 0;
+  box-shadow: none !important;
+  font-family: "Poppins", sans-serif;
+}
+.signUpPage .container {
+  width: 100%;
+  border-radius: 6px;
+  padding: 50px 30px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.signUpPage .container form {
+  position: relative;
+  margin-top: 16px;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.signUpPage .container form .uploadImg img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 20px 0;
+}
+.signUpPage .container form label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2e2e2e;
+  margin: 20px 0;
+}
+.signUpPage .container form .form-control, .signUpPage .container form .form-select {
+  box-shadow: none !important;
+}
+.signUpPage .form-check-input:checked {
+  background-color: #485da1;
+}
+.signUpPage .signUpBtn {
+  background-color: #485da1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUpPage .signUpBtn button {
+  background-color: #485da1;
+  margin: 0 !important;
+}
+.signUpPage .container form button, .signUpPage .backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 250px;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 25px 0;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: 14px;
+}
+.signUpPage .container form button i, .signUpPage .backBtn i {
+  padding-right: 10px;
+}
+.signUpPage .container form button a, .signUpPage .backBtn a {
+  color: white;
+  font-weight: 500;
+}
+.signUpPage select {
+  color: grey;
+}
+.signUpPage .form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 30px;
+}
+.signUpPage .sign-in_ggl {
+  background-color: white;
+}
+.signUpPage .sign-in_ggl span {
+  color: rgba(0, 0, 0, 0.5411764706);
+  margin-left: 10px;
+}
+.signUpPage .sign-in_ggl span a {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5411764706) !important;
+}
+.signUpPage .sign-in_twitter {
+  background-color: #4ab3f4;
+}
+.signUpPage .sign-in_facebook {
+  background-color: #1877F2;
+}
+.signUpPage .signUp-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(235, 232, 232);
+  margin-bottom: 20px;
+}
+.signUpPage .signUp-bottom {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signUpPage .signUp-bottom h2 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+.signUpPage .signUp-bottom a {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #4070f4;
 }
 
 footer .footer-top {

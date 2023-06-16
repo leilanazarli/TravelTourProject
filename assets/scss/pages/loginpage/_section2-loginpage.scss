@@ -1,6 +1,6 @@
 .loginpage{
     .container{
-        padding: 100px 0;
+        padding:50px 0 100px 0;
         
 .form_container {
 	width: 100%;
@@ -16,15 +16,15 @@
 	border-radius: 11px;
 	font-family: "Inter", sans-serif;
 }
-.logo_container {
-	box-sizing: border-box;
-	width: 80px;
-	height: 80px;
-	background: linear-gradient(180deg, rgba(248, 248, 248, 0) 50%, #F8F8F888 100%);
-	border: 1px solid #F7F7F8;
-	filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
-	border-radius: 11px;
-}
+// .logo_container {
+// 	box-sizing: border-box;
+// 	width: 80px;
+// 	height: 80px;
+// 	background: linear-gradient(180deg, rgba(248, 248, 248, 0) 50%, #F8F8F888 100%);
+// 	border: 1px solid #F7F7F8;
+// 	filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+// 	border-radius: 11px;
+// }
 .title_container {
 	display: flex;
 	flex-direction: column;
