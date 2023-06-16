@@ -44,7 +44,7 @@ const handleFormData = (e) => {
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
     const date = dateInput.value;
-    const gender = genderInput.value;
+    // const gender = genderInput.value;
     // Regular expression pattern for email validation
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     // Clearing previous error messages

@@ -76,18 +76,12 @@ z-index: 3;
         display: none;
     }
     .drop{
-        
-    
         &:hover{
              .dropdown-menu {
                         display: block;
                         top: 60px;
                         border-radius: 0;
-                    // transform: translateY(0);
-                    // transform: translateY(100px);
-                            // transition: 1s;
-                            // transition-timing-function: ease-out; 
-                            padding: 10px 20px;
+                        padding: 10px 20px;
                             a{
                                 padding: 10px ;
                                 font-family: $font-roboto;
@@ -102,9 +96,6 @@ z-index: 3;
                     top: 200px;
                     background-color: rgb(46, 46, 46);
                     display: none;
-    //                 transform: translateY(50px);
-    //   transition: 0.5s;
-    //   transition-timing-function: ease-in;
                 }
         }
 

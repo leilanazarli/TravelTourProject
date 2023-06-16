@@ -121,7 +121,7 @@ font-family:    $font-poppins;
     }
     .password{
         position: relative;
-        .fa-eye{
+        .fa-eye , .fa-eye-slash{
             position: absolute !important;
             right: 0px;
             height: 45px;
@@ -132,5 +132,11 @@ font-family:    $font-poppins;
             cursor: pointer;
             color: #939393;
             text-align: center;
+            &::before{
+                
+                top: 65px;
+            
+            }
         }
+        
     }
