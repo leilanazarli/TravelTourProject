@@ -2850,17 +2850,19 @@ header h2 {
   --speed: 0.5s;
   --width: clamp(100px, 45vmin, 100px);
   --ar: 8 / 3;
-  --ray: hsl(0 0% 100% / 0.5);
+  --ray: hsla(0, 77%, 30%, 0.5);
   --sun: hsl(47, 91%, 58%);
   --moon: hsl(212, 13%, 82%);
   --crater: hsl(221, 16%, 68%);
   --bg: hsl(219, 30%, 88%);
+  --nav: hsl(218, 64%, 65%);
   --bear-speed: 10s;
   --color: hsl(219 30% 20%);
 }
 
 [data-dark-mode=true] {
-  --bg: hsl(219, 30%, 12%);
+  --bg: rgb(87,89,102);
+  --nav: hsl(219, 30%, 12%);
   --color: hsl(219 30% 98%);
 }
 
@@ -2872,6 +2874,9 @@ body {
   background: var(--bg);
   transition: background var(--speed) var(--easing);
   font-family: sans-serif, system-ui;
+}
+body .sidebar {
+  background: var(--nav);
 }
 
 .toggle__backdrop {
