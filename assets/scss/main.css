@@ -2650,19 +2650,20 @@ header h2 {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
 }
-.sidebar .close {
+
+.close {
   width: 75px;
 }
-.sidebar .close .logo_name,
-.sidebar .close #lock-icon,
-.sidebar .close #sidebar-close {
+.close .logo_name,
+.close #lock-icon,
+.close #sidebar-close {
   opacity: 0;
   pointer-events: none;
 }
-.sidebar .close .title {
+.close .title {
   opacity: 0;
 }
-.sidebar .close .line {
+.close .line {
   opacity: 1;
 }
 
