@@ -15,12 +15,14 @@
 	--crater: hsl(221, 16%, 68%);
 	--bg: hsl(219, 30%, 88%);
 	--nav: hsl(218, 64%, 65%);
+	--charts    : hsl(218, 64%, 65%);
 	--bear-speed: 10s;
 	--color: hsl(219 30% 20%);
 }
 [data-dark-mode=true] {
 	--bg: rgb(87,89,102);
 	--nav: hsl(219, 30%, 12%);
+	--charts: hsl(219, 30%, 12%);
 	--color: hsl(219 30% 98%);
 }
 
@@ -32,8 +34,11 @@ body {
 	background: var(--bg);
 	transition: background var(--speed) var(--easing);
 	font-family: sans-serif, system-ui;
-	.sidebar{
+	.sidebar {
 	background: var(--nav);
+}
+    .charts-card{
+    background: var(--charts);
 	}
 }
 .toggle__backdrop {
