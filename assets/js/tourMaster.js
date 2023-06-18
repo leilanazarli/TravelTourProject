@@ -1,7 +1,7 @@
 let tbody=document.querySelector("tbody")
 let BASE_URL="http://localhost:8000"
 
-async function getTable(){
+async function getTableTour(){
 tbody.innerHTML=""
     let res=await axios(`${BASE_URL}/tours`)
     let data=res.data
@@ -9,7 +9,7 @@ tbody.innerHTML=""
         tbody.innerHTML+=`
         <tr>
                   <th scope="row">${element.id}</th>
-                  <td>${element}</td>
+                  <td>${element.shortinfo}</td>
                   <td>${element}<i class="fa-regular fa-envelope text-primary"></i></td>
                   <td>${element}</td>
                   <td>${element}</td>
@@ -25,4 +25,4 @@ tbody.innerHTML=""
         `
     });
 }
-getTable()
+getTableTour()

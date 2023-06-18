@@ -3,6 +3,7 @@
         {
             "id": 1,
             "name": "Leanne Graham",
+            "salary":"8.500$",
             "image":"personnel-1-550x500.jpg",
             "position":"Chief Executive Officer",
             "username": "Bret",
@@ -53,6 +54,7 @@
           ,
           {
             "id": 2,
+            "salary":"5.500$",
             "name": "Ervin Howell",
             "username": "Antonette",
             "image":"personnel-2-550x500.jpg",
@@ -103,6 +105,7 @@
           },
           {
             "id": 3,
+            "salary":"3.400$",
             "name": "Clementine Bauch",
             "username": "Samantha",
             "email": "Nathan@yesenia.net",
@@ -153,6 +156,7 @@
           },
           {
             "id": 4,
+            "salary":"2.500$",
             "name": "Patricia Lebsack",
             "username": "Karianne",
             "email": "Julianne.OConner@kory.org",
@@ -204,6 +208,7 @@
           {
             "id": 5,
             "name": "Chelsey Dietrich",
+            "salary":"1.500$",
             "username": "Kamren",
             "email": "Lucio_Hettinger@annie.ca",
             "image":"personnel-5-550x500.jpg",
@@ -254,6 +259,7 @@
           {
             "id": 6,
             "name": "Mrs. Dennis Schulist",
+            "salary":"2.450$",
             "username": "Leopoldo_Corkery",
             "email": "Karley_Dach@jasper.info",
             "image":"personnel-6-550x500.jpg",
