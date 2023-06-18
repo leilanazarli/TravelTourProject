@@ -162,7 +162,7 @@ table {
   background-color: #0693e3;
 }
 
-.container .navbar-tourmaster .filterforDate, .container .navbar-tourmaster .searchforName {
+.personnel-container .navbar-tourmaster .filterforDate, .personnel-container .navbar-tourmaster .searchforName, .tourMaster-container .navbar-tourmaster .filterforDate, .tourMaster-container .navbar-tourmaster .searchforName {
   padding: 15px 33px;
   font-size: 13px;
   font-weight: 600;
@@ -172,7 +172,7 @@ table {
   font-family: "Roboto", sans-serif;
   background-color: #4692e7;
 }
-.container .navbar-tourmaster .filterforDate:hover, .container .navbar-tourmaster .searchforName:hover {
+.personnel-container .navbar-tourmaster .filterforDate:hover, .personnel-container .navbar-tourmaster .searchforName:hover, .tourMaster-container .navbar-tourmaster .filterforDate:hover, .tourMaster-container .navbar-tourmaster .searchforName:hover {
   background-color: #0693e3;
 }
 
@@ -2170,31 +2170,23 @@ header h2 {
 }
 
 .loginpage-title {
-  background: url("../img/about-img/page-title-background.jpg");
+  background: url("../img/gallery-img/wallpaperflare.com_wallpaper (21).jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding: 180px 0;
 }
-.loginpage-title h1 {
+.loginpage-title .container h1 {
   color: white;
   font-size: 43px;
   font-weight: 900;
   font-family: "Poppins", sans-serif;
 }
-.loginpage-title p {
-  color: white;
-  margin-top: 30px;
-  font-size: 33px;
-  font-weight: 900;
+.loginpage-title .container p {
   font-family: "Dancing Script", cursive;
 }
-
-.loginpage .container {
-  padding: 50px 0 100px 0;
-}
-.loginpage .container .form_container {
+.loginpage-title .container .form_container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2202,54 +2194,56 @@ header h2 {
   justify-content: center;
   gap: 15px;
   padding: 20px 40px 20px 40px;
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 8, 0.9);
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
   border-radius: 11px;
   font-family: "Inter", sans-serif;
 }
-.loginpage .container .title_container {
+.loginpage-title .container .title_container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-.loginpage .container .title {
+.loginpage-title .container .title {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 33px;
   font-weight: 700;
-  color: #212121;
+  color: #fff;
 }
-.loginpage .container .subtitle {
+.loginpage-title .container .subtitle {
   font-size: 0.725rem;
   max-width: 80%;
   text-align: center;
   line-height: 1.1rem;
   color: #8B8E98;
 }
-.loginpage .container .input_container {
+.loginpage-title .container .input_container {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
 }
-.loginpage .container .icon {
+.loginpage-title .container .icon {
   width: 20px;
   position: absolute;
   z-index: 99;
-  left: 12px;
+  left: 38%;
   bottom: 9px;
 }
-.loginpage .container .input_label {
+.loginpage-title .container .input_label {
   font-size: 0.75rem;
   color: #8B8E98;
   font-weight: 600;
 }
-.loginpage .container .input_field {
-  width: auto;
+.loginpage-title .container .input_field {
+  width: 25%;
   height: 40px;
   padding: 0 0 0 40px;
   border-radius: 7px;
@@ -2258,12 +2252,12 @@ header h2 {
   filter: drop-shadow(0px 1px 0px #efefef) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
   transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
-.loginpage .container .input_field:focus {
+.loginpage-title .container .input_field:focus {
   border: 1px solid transparent;
   box-shadow: 0px 0px 0px 2px #242424;
   background-color: transparent;
 }
-.loginpage .container .sign-in_btn {
+.loginpage-title .container .sign-in_btn {
   width: 25%;
   height: 40px;
   border: 0;
@@ -2273,7 +2267,7 @@ header h2 {
   color: #ffffff;
   cursor: pointer;
 }
-.loginpage .container .sign-in_ggl {
+.loginpage-title .container .sign-in_ggl {
   width: 25%;
   height: 40px;
   display: flex;
@@ -2288,7 +2282,7 @@ header h2 {
   filter: drop-shadow(0px 1px 0px #efefef) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
   cursor: pointer;
 }
-.loginpage .container .sign-in_apl {
+.loginpage-title .container .sign-in_apl {
   width: 25%;
   height: 40px;
   display: flex;
@@ -2303,7 +2297,7 @@ header h2 {
   filter: drop-shadow(0px 1px 0px #efefef) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
   cursor: pointer;
 }
-.loginpage .container .separator {
+.loginpage-title .container .separator {
   width: 100%;
   display: flex;
   align-items: center;
@@ -2311,14 +2305,14 @@ header h2 {
   gap: 30px;
   color: #8B8E98;
 }
-.loginpage .container .separator .line {
+.loginpage-title .container .separator .line {
   display: block;
   width: 100%;
   height: 1px;
   border: 0;
   background-color: #e8e8e8;
 }
-.loginpage .container .note {
+.loginpage-title .container .note {
   font-size: 0.75rem;
   color: #8B8E98;
   text-decoration: underline;
@@ -3538,41 +3532,75 @@ body .charts-card {
   transition: accent-color var(--speed) var(--easing);
 }
 
-.container {
+.tourMaster-container {
   font-family: "Poppins", sans-serif;
-  padding-left: 150px;
+  padding-left: 350px;
   width: 80%;
   padding-top: 100px;
   display: flex;
   gap: 20px;
   flex-direction: column;
 }
-.container .navbar-tourmaster .search_box {
+.tourMaster-container .navbar-tourmaster .search_box {
   width: 25%;
 }
-.container .navbar-tourmaster .searchforName {
+.tourMaster-container .navbar-tourmaster .searchforName {
   width: 15%;
 }
-.container .navbar-tourmaster .filterforDate {
+.tourMaster-container .navbar-tourmaster .filterforDate {
   width: 15%;
 }
-.container .tourmaster-AdminPanel .tourmaster-title {
+.tourMaster-container .tourmaster-AdminPanel .tourmaster-title {
   padding: 30px 40px;
   width: 100%;
   font-size: 25px;
   color: #8f8f8f;
   background-color: #6d97df;
 }
-.container .tourmaster-AdminPanel .action a {
+.tourMaster-container .tourmaster-AdminPanel .action a {
   padding: 2px;
   border: 1px solid #6d97df;
   background: #6d97df;
 }
-.container .tourmaster-AdminPanel .action a i {
+.tourMaster-container .tourmaster-AdminPanel .action a i {
   color: white;
 }
 
-.modal {
+.personnel-container {
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  padding: 100px 0 0 350px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  /* Modal Content */
+  /* The Close Button */
+}
+.personnel-container .navbar-tourmaster .search_box {
+  width: 25%;
+}
+.personnel-container .navbar-tourmaster .searchforName {
+  width: 15%;
+}
+.personnel-container .navbar-tourmaster .filterforDate {
+  width: 15%;
+}
+.personnel-container .tourmaster-AdminPanel .tourmaster-title {
+  padding: 30px 40px;
+  width: 100%;
+  font-size: 25px;
+  color: #8f8f8f;
+  background-color: #6d97df;
+}
+.personnel-container .tourmaster-AdminPanel .action a {
+  padding: 2px;
+  border: 1px solid #6d97df;
+  background: #6d97df;
+}
+.personnel-container .tourmaster-AdminPanel .action a i {
+  color: white;
+}
+.personnel-container .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -3585,26 +3613,21 @@ body .charts-card {
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
-
-/* Modal Content */
-.modal-content {
+.personnel-container .modal-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
 }
-
-/* The Close Button */
-.close {
+.personnel-container .close {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
-.close:hover,
-.close:focus {
+.personnel-container .close:hover,
+.personnel-container .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
