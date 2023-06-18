@@ -27,10 +27,6 @@
 }
 
 body {
-	display: grid;
-	place-items: center;
-	min-height: 100vh;
-	overflow: hidden;
 	background: var(--bg);
 	transition: background var(--speed) var(--easing);
 	font-family: sans-serif, system-ui;

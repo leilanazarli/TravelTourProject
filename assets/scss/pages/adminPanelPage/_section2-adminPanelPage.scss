@@ -1,12 +1,8 @@
 .container{
     width: 80%;
     padding-left: 150px;
+    padding-top: 100px;
     font-family: $font-poppins;
-  .main-title {
-    display: flex;
-    justify-content: space-between;
-  }
-  
   .main-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

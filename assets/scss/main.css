@@ -2845,11 +2845,8 @@ a.active {
 .container {
   width: 80%;
   padding-left: 150px;
+  padding-top: 100px;
   font-family: "Poppins", sans-serif;
-}
-.container .main-title {
-  display: flex;
-  justify-content: space-between;
 }
 .container .main-cards {
   display: grid;
@@ -2946,10 +2943,6 @@ a.active {
 }
 
 body {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  overflow: hidden;
   background: var(--bg);
   transition: background var(--speed) var(--easing);
   font-family: sans-serif, system-ui;
