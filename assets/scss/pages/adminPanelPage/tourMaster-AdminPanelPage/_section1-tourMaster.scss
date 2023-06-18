@@ -1,0 +1,40 @@
+
+.container{
+    font-family: $font-poppins;
+    padding-left: 150px;
+    width: 80%;
+    padding-top: 100px;
+    @include onlyFlexColumn();
+    .navbar-tourmaster {
+        .search_box{
+            width: 25%
+        }
+        .searchforName{
+            @extend %button-oval;
+            width: 15%;
+        }
+        .filterforDate{
+            @extend %button-oval;
+            width: 15%;
+        }
+    }
+    .tourmaster-AdminPanel{
+        .tourmaster-title{
+            padding: 30px 40px;
+            width: 100%;
+            font-size: 25px;
+            color: #8f8f8f;
+            background-color:  #6d97df;
+        }
+        .action{
+            a{
+                padding: 4px;
+                border: 1px solid #6d97df ;
+                background:#6d97df ;
+                i{
+                    color: white;
+                }
+            }
+        }
+    }
+}
