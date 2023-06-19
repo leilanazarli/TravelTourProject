@@ -1,3 +1,7 @@
+const form = document.querySelector("form");
+const passwordInput = document.getElementById("password");
+const passToggleBtn = document.getElementById("pass-toggle-btn");
+
 let startYear = 1800;
 let endYear = new Date().getFullYear();
 for (i = endYear; i > startYear; i--)
@@ -20,10 +24,7 @@ file.addEventListener("change" ,(e)=>{
     img.src= URL.createObjectURL(e.target.files[0])
 })
 
-const form = document.querySelector("form");
-const passwordInput = document.getElementById("password");
-const passToggleBtn = document.getElementById("pass-toggle-btn");
-// Function to display error messages
+
 const showError = (field, errorText) => {
     field.classList.add("error");
     const errorElement = document.createElement("small");
@@ -31,7 +32,6 @@ const showError = (field, errorText) => {
     errorElement.innerText = errorText;
     field.closest(".form-group").appendChild(errorElement);
 }
-// Function to handle form submission
 const handleFormData = (e) => {
     e.preventDefault();
     // Retrieving input elements
@@ -72,10 +72,8 @@ const handleFormData = (e) => {
     // Submitting the form
     form.submit();
 }
-// Toggling password visibility
 passToggleBtn.addEventListener('click', () => {
     passToggleBtn.className = passwordInput.type === "password" ? "fa-solid fa-eye-slash" : "fa-solid fa-eye";
     passwordInput.type = passwordInput.type === "password" ? "text" : "password";
 });
-// Handling form submission event
 form.addEventListener("submit", handleFormData);

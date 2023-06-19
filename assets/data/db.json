@@ -1,4 +1,5 @@
-{
+{   
+    "customers":[],
     "users":[
         {
             "id": 1,
