@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-const passwordInput = document.getElementById("password");
+const passwordInput = document.querySelector("#password");
 const passToggleBtn = document.getElementById("pass-toggle-btn");
 
 let startYear = 1800;
@@ -18,8 +18,8 @@ function onSubmit(token) {
     document.getElementById("demo-form").submit();
 }
 
-var file =document.getElementById("inImg")
-var img = document.getElementById("image")
+let file =document.getElementById("inImg")
+let img = document.getElementById("image")
 file.addEventListener("change" ,(e)=>{
     img.src= URL.createObjectURL(e.target.files[0])
 })
@@ -32,48 +32,47 @@ const showError = (field, errorText) => {
     errorElement.innerText = errorText;
     field.closest(".form-group").appendChild(errorElement);
 }
-const handleFormData = (e) => {
-    e.preventDefault();
-    // Retrieving input elements
-    const fullnameInput = document.getElementById("fullname");
-    const emailInput = document.getElementById("email");
-    const dateInput = document.getElementsByClassName("date");
-    // const genderInput = document.getElementById("gender");
-    // Getting trimmed values from input fields
-    const fullname = fullnameInput.value.trim();
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
-    const date = dateInput.value;
-    // const gender = genderInput.value;
-    // Regular expression pattern for email validation
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    // Clearing previous error messages
-    document.querySelectorAll(".form-group .error").forEach(field => field.classList.remove("error"));
-    document.querySelectorAll(".error-text").forEach(errorText => errorText.remove());
-    // Performing validation checks
-    if (fullname === "") {
-        showError(fullnameInput, "Enter your full name");
-    }
-    if (!emailPattern.test(email)) {
-        showError(emailInput, "Enter a valid email address");
-    }
-    if (password === "") {
-        showError(passwordInput, "Enter your password");
-    }
-    if (date === "") {
-        showError(dateInput, "Select your date of birth");
-    }
-    // if (gender === "") {
-    //     showError(genderInput, "Select your gender");
-    // }
-    // Checking for any remaining errors before form submission
-    const errorInputs = document.querySelectorAll(".form-group .error");
-    if (errorInputs.length > 0) return;
-    // Submitting the form
-    form.submit();
-}
+
 passToggleBtn.addEventListener('click', () => {
     passToggleBtn.className = passwordInput.type === "password" ? "fa-solid fa-eye-slash" : "fa-solid fa-eye";
     passwordInput.type = passwordInput.type === "password" ? "text" : "password";
 });
-form.addEventListener("submit", handleFormData);
+
+let username=document.querySelector("#username")
+let firstname=document.querySelector("#firstname")
+let yearpicker=document.querySelector("#yearpicker")
+let monthpicker=document.querySelector("#monthpicker")
+let daypicker=document.querySelector("#daypicker")
+let phone=document.querySelector("#phone")
+let lastname=document.querySelector("#lastname")
+let email=document.querySelector("#email")
+let country=document.querySelector("#country")
+let checkbox=document.querySelector("#checkbox")
+let signUpBTN=document.querySelector(".signUpBTN")
+let BASE_URL="http://localhost:8000/customers"
+form.addEventListener("submit" ,async function(e){
+e.preventDefault()
+if(firstname.value!="" && monthpicker.value!="" && daypicker.value!="" && yearpicker.value!="" && lastname.value!="" && username.value!="" && email.value!="" && country.value!="" && passwordInput.value!="" && phone.value!="" && checkbox.value!="" && file.value!=""){
+    let customer={
+        id:Date.now(),
+        img:file.value,
+        username:username.value,
+        firstname:firstname.value,
+        lastname:lastname.value,
+        email:email.value,
+        password:passwordInput.value,
+        phone:phone.value,
+        checkbox:checkbox.checked,
+        year:yearpicker.value,
+        month:monthpicker.value,
+        day:daypicker.value,
+        country:country.value
+    }
+    await axios.post(`${BASE_URL} `,customer)
+    window.location.href="http://127.0.0.1:5500/TravelTourProject/login.html"
+}
+else{
+    alert("Empty value !!!")
+}
+ 
+})
