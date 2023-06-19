@@ -1,4 +1,10 @@
 {
+  "promotionsEmail": [
+    {
+      "promotionsEmail": "leyla.nezerli.2002@gmail.com",
+      "id": 1
+    }
+  ],
   "customers": [
     {
       "id": 1687146772683,
@@ -104,6 +110,21 @@
       "month": "October",
       "day": "28",
       "country": "ATA"
+    },
+    {
+      "id": 1687158107702,
+      "img": "C:\\fakepath\\personnel-4-550x500.jpg",
+      "username": "ryvimagyky",
+      "firstname": "Stacey",
+      "lastname": "Hart",
+      "email": "xufeveziko@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "phone": "+1 (529) 588-4536",
+      "checkbox": true,
+      "year": "1985",
+      "month": "February",
+      "day": "16",
+      "country": "URY"
     }
   ],
   "users": [

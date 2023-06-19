@@ -190,3 +190,14 @@ chatInput.addEventListener("keydown", (e) => {
 sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+let promotionsEmail=document.querySelector("#promotionsEmail")
+let promotionsEmailBtn=document.querySelector("#promotionsEmailBtn")
+
+promotionsEmailBtn.addEventListener("click" ,async function(){
+let BASE_URL="http://localhost:8000/promotionsEmail"
+  let emailObj={
+    promotionsEmail:promotionsEmail.value
+  }
+  await axios.post(`${BASE_URL}` , emailObj)
+})
