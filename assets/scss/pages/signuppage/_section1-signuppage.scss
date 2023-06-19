@@ -1,18 +1,145 @@
 .signUpPage-title{
-    background: url("../img/about-img/page-title-background.jpg");
+    background: url("../img/gallery-img/wallpaperflare.com_wallpaper\ \(22\).jpg") ;
     @include backgroundImgFixed();
-    padding: 180px 0;
+    .container{
+       padding: 180px 0;
     h1{
         color: white; 
         font-size: 43px;
         font-weight: 900;
         font-family: $font-poppins;
         }
-    p{
-        color: white; 
-        margin-top: 30px;
-        font-size: 33px;
-        font-weight: 900;
+    label{
+        color: white;
         font-family: $font-dancing;
+        font-size: 20px;
+        font-weight: 500;
+        margin: 20px 0;
     }
+    .form_container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px 40px 20px 40px;
+        background-color: rgb(0,0,8,0.9);
+        box-shadow: 
+        0px 7px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 11px;
+        font-family: "Inter", sans-serif;
+        .sign-in_ggl{
+    background-color: white;
+    span{
+        color: #0000008A;
+        margin-left: 10px;
+        a{
+            font-weight: 500;
+            color: #0000008A !important;
+        }
+    }
+}
+.sign-in_twitter{
+    background-color: #4ab3f4;;
+}
+.sign-in_facebook{
+    background-color: #1877F2;
+}
+        .form-control ,.form-select{
+    box-shadow: none !important;
+}
+.uploadImg{
+    img{
+        border-radius: 50%;
+        border: 1px;
+        width: 150px;
+        height: 100px;
+        margin: 20px 0;
+    }
+}
+.form-check-input{
+    box-shadow: none !important;
+
+    &:checked{
+        background-color: #485da1;
+    }
+    
+}
+.signUpBtn{
+    background-color: #485da1;
+    @include flexCenter();
+    button{
+        background-color: #485da1;
+        margin: 0 !important;
+    }
+}
+button, .backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 250px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    font-size: 14px;
+    i{
+        padding-right: 10px ;
+    }
+    a{
+        color: white;
+        font-weight: 500;
+    }
+}
+ select{
+    color: grey;
+}
+.form-check{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 30px;
+}
+        .signUp-line{
+                width: 100%;
+                height: 1px;
+                background-color: rgb(235, 232, 232);
+                margin-bottom: 20px;
+            }
+            .signUp-bottom{
+            @include flexColumn();
+                h2{
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: white;
+                    font-family: $font-poppins;
+                }
+                a{
+                    font-size: 15px;
+                    font-family: $font-poppins;
+                    color: #4070f4  ;
+                }
+            }
+            .password{
+    position: relative;
+    .fa-eye , .fa-eye-slash{
+        position: absolute !important;
+        right: 0px;
+        height: 45px;
+        top: 70px;
+        font-size: 13px;
+        right: 10px;
+        width: 45px;
+        cursor: pointer;
+        color: #939393;
+        text-align: center;
+        }
+      }
+     }
+   }
 }
