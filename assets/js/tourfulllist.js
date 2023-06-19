@@ -78,19 +78,22 @@ keywords.addEventListener("input" ,async function(e){
  fav=fav.filter(element=>element.shortinfo.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
  getData()
 })
-activity.addEventListener("input" ,async function(e){
+activity.addEventListener("click" ,async function(e){
  fav=activityArr
- fav=fav.filter(element=>element.shortinfo.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
- getData()
+ fav=fav.filter(element=>element.activity==e.target.value)
+console.log(fav);
+getData()
 })
-destination.addEventListener("input" ,async function(e){
+destination.addEventListener("click" ,async function(e){
  fav=destinationArr
- fav=fav.filter(element=>element.shortinfo.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
+ fav=fav.filter(element=>element.destination.toLocaleLowerCase()==e.target.value.toLocaleLowerCase())
+ console.log(fav);
  getData()
 })
-duration.addEventListener("input" ,async function(e){
+duration.addEventListener("click" ,async function(e){
  fav=durationArr
- fav=fav.filter(element=>element.shortinfo.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
+ fav=fav.filter(element=>element.duration.toLocaleLowerCase()==e.target.value.toLocaleLowerCase())
+ console.log(fav);
  getData()
 })
 
