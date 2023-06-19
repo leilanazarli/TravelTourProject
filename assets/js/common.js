@@ -1,12 +1,6 @@
-// let menuburger= document.querySelector(".fa-bars")
-// let ul=document.querySelector("ul")
-// menuburger.addEventListener("click" , function(){
-//     ul.classList.toggle("show")
-//     ul.classList.remove("allUl")
-//     menuburger.classList.contains("fa-bars")
-//     ?(this.classList="fa-solid fa-xmark")
-//     :(this.classList="fa-solid fa-bars" ,ul.classList.add("allUl"))
-// })
+let usersData=JSON.parse(localStorage.getItem("users")) || []
+
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     

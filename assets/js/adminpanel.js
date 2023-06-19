@@ -2,6 +2,26 @@ const sidebar = document.querySelector(".sidebar");
 const sidebarOpenBtn = document.querySelector("#sidebar-open");
 const sidebarCloseBtn = document.querySelector("#sidebar-close");
 const sidebarLockBtn = document.querySelector("#lock-icon");
+const sidebar_profile = document.querySelector(".sidebar_profile");
+
+
+let BASE_URL="http://localhost:8000/admin"
+async function getAdmin(){
+sidebar_profile.innerHTML=''
+  let res= await axios(BASE_URL)
+  let data=res.data
+  data.forEach((element) => {
+  sidebar_profile.innerHTML+=`
+  <span class="nav_image">
+            <img src="${element.img}" alt="logo_img" />
+          </span>
+          <div class="data_text">
+            <span class="name">${element.username}</span>
+            <span class="email">${element.email}</span>
+          </div> 
+  `})
+}
+getAdmin()
 
 // Function to toggle the lock state of the sidebar
 const toggleLock = () => {
