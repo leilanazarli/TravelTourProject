@@ -1,18 +1,33 @@
 let paginatedList = document.querySelector(".data");
 let toursData = document.querySelector(".tours-data");
 let articles = document.querySelector(".recent-articles-row");
+
+let keywords=document.querySelector("#keyWords")
+let activity=document.querySelector("#Activity")
+let destination=document.querySelector("#Destination")
+let duration=document.querySelector("#Duration")
+let searchBtn=document.querySelector("#search")
+
 let BASE_URL = "http://localhost:8000";
 // let BASE_URL="http://localhost:8000/tours"
 let allData=[]
+let searchArr=[]
+let activityArr=[]
+let destinationArr=[]
+let durationArr=[]
 let num=3
 let fav=[]
 async function getData() {
   paginatedList.innerHTML = "";
   let res = await axios(`${BASE_URL}/tours`);
   let data = res.data;
+  searchArr=data
+  activityArr=data
+  destinationArr=data
+  durationArr=data
   allData=data
   console.log(data);
-  fav=fav.length ?fav.slice(0,num) :data.slice(0,num)
+  fav=fav.length  || keywords.value  ?fav.slice(0,num) :data.slice(0,num)
   fav.forEach((element) => {
     paginatedList.innerHTML += `
     <div class="sidebar-carda">
@@ -56,6 +71,29 @@ loadmore.addEventListener("click" , function(){
   fav=allData
   getData()
 })
+
+
+keywords.addEventListener("input" ,async function(e){
+ fav=searchArr
+ fav=fav.filter(element=>element.shortinfo.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
+ getData()
+})
+activity.addEventListener("input" ,async function(e){
+ fav=activityArr
+ fav=fav.filter(element=>element.shortinfo.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
+ getData()
+})
+destination.addEventListener("input" ,async function(e){
+ fav=destinationArr
+ fav=fav.filter(element=>element.shortinfo.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
+ getData()
+})
+duration.addEventListener("input" ,async function(e){
+ fav=durationArr
+ fav=fav.filter(element=>element.shortinfo.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
+ getData()
+})
+
 
 async function getLatestTours() {
   toursData.innerHTML = "";
@@ -198,3 +236,5 @@ getRecentArticles();
 //     }
 //   });
 // });
+
+

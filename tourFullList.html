@@ -10,6 +10,41 @@
     <title>Travel Tour</title>
 </head>
 <body>
+  <div id="mySidenav" class="sidenav">
+    <a class="closebtn" onclick="closeNav()">&times;</a>
+    <ul class="mobile-ul">
+      <li><a href="./home.html" class="allA" >Home</a></li>
+      <li class="drop">
+          <div class="mt-0 dropdown d-flex flex-column ">
+              <div
+                class="btn p-0 dropdown-toggle allA "
+                style="box-shadow: none; "
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Pages
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="./about.html">About</a></li>
+                <li><a class="dropdown-item" href="./ourservices.html">Our Services</a></li>
+                <li><a class="dropdown-item" href="./contact.html">Contact</a></li>
+                <li><a class="dropdown-item" href="./portfolio.html">Portfolio</a></li>
+                <li><a class="dropdown-item" href="./gallery.html">Gallery</a></li>
+                <li><a class="dropdown-item" href="./team.html">Team</a></li>
+                <li><a class="dropdown-item" href="./product.html">Product</a></li>
+                <li><a class="dropdown-item" href="./404page.html">404 Page</a></li>
+              </ul>
+            </div> 
+      </li>
+      <li><a href="./tourFullList.html" class="allA">Tour List</a></li>
+      <li><a href="" class="allA">Destinations</a></li>
+      <li><a href="" class="allA">Date & Pricing</a></li>
+      <li><a href="" class="allA">Tour System</a></li>
+      <li><a href="" class="allA">Blog</a></li>
+    </ul>
+  </div>
   <header>
     <div class="header-top">
         <div class="container">
@@ -80,51 +115,51 @@
                     <div class="keywords search ">
                         <label for="">Keywords</label>
                         <div class="input-group">
-                          <input type="search" class="form-control">
+                          <input type="search" class="form-control" id="keyWords">
                           <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
                         </div>
                         
                       </div>
                       <div class="activity search">
                         <label for="">Activity</label>
-                        <select name="" id="" class="form-select">
+                        <select name="" id="Activity" class="form-select">
                         <option value="">Any</option>
-                        <option value="">City Tours</option>
-                        <option value="">Cultural & Thematic Tours</option>
-                        <option value="">Family Friendly Tours</option>
-                        <option value="">Holiday & Seasonal Tours </option>
-                        <option value="">Indulgence & Luxury Tours Outdoor Activites</option>
-                        <option value="">Relaxation Tours</option>
-                        <option value="">Wild & Adventure Tours</option>
+                        <option value="City Tours">City Tours</option>
+                        <option value="Cultural & Thematic Tours">Cultural & Thematic Tours</option>
+                        <option value="Family Friendly Tours">Family Friendly Tours</option>
+                        <option value="Holiday & Seasonal Tours">Holiday & Seasonal Tours </option>
+                        <option value="Indulgence & Luxury Tours Outdoor Activites">Indulgence & Luxury Tours Outdoor Activites</option>
+                        <option value="Relaxation Tours">Relaxation Tours</option>
+                        <option value="Wild & Adventure Tours">Wild & Adventure Tours</option>
                         </select>
                       </div>
                       <div class="destination search">
                         <label for="">Destination</label>
-                        <select name="" id="" class="form-select">
+                        <select name="" id="Destination" class="form-select">
                           <option value="" >Any</option>
-                          <option value="">Africa</option>
-                          <option value="">America</option>
-                          <option value="">Asia</option>
-                          <option value="">Eastren Europe</option>
-                          <option value="">Europe</option>
-                          <option value="">South America</option>
+                          <option value="Africa">Africa</option>
+                          <option value="America">America</option>
+                          <option value="Asia">Asia</option>
+                          <option value="astren Europe">Eastren Europe</option>
+                          <option value="Europe">Europe</option>
+                          <option value="South America">South America</option>
                         </select>  
                       </div>
                       <div class="duration search">
                         <label for="">Duration</label>
-                        <select name="" id="" class="form-select">
+                        <select name="" id="Duration" class="form-select">
                           <option value="">Any</option>
-                          <option value="">1 Day Tour</option>
-                          <option value="">2-4 Days Tour</option>
-                          <option value="">5-7 Days Tour</option>
-                          <option value="">7+ Days Tour</option>
+                          <option value="1 Day Tour">1 Day Tour</option>
+                          <option value="2-4 Days Tour">2-4 Days Tour</option>
+                          <option value="5-7 Days Tour">5-7 Days Tour</option>
+                          <option value="7+ Days Tour">7+ Days Tour</option>
                         </select>
                       </div>
-                      <div class="date search">
+                      <!-- <div class="date search">
                         <label for="">Date</label>
                         <input type="date" class="form-control">
-                      </div>
-                      <div class="buttonsearch  search">
+                      </div> -->
+                      <div class="buttonsearch  search" id="search">
                         <button class="searchbtn">SEARCH</button>
                       </div>
                     
