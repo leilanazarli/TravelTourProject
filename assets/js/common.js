@@ -1,5 +1,6 @@
 let signup=document.querySelector("#signupTitle")
 let login=document.querySelector("#loginTitle")
+let logout=document.querySelector("#logout")
 let userTitle=document.querySelector("#userTitle")
 userTitle.style.display="none"
 async function getUser(){
@@ -16,10 +17,14 @@ async function getUser(){
     userTitle.style.display="block"
    signup.style.display="none"
    login.style.display="none"
+   logout.style.display="block"
   }
 }
 getUser()
-
+logout.style.display="none"
+logout.addEventListener("click" ,function(){
+  localStorage.removeItem("users")
+})
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     

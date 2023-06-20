@@ -1,12 +1,18 @@
 let tbody=document.querySelector("tbody")
-let BASE_URL="http://localhost:8000"
+let BASE_URL="http://localhost:8000/users"
+let search=document.querySelector("#search-personnel")
+let filter=document.querySelector("#filter-personnel")
 
 
+let fav=[]
+let allData=[]
 async function getTablePersonnel(){
 tbody.innerHTML=""
-    let res=await axios(`${BASE_URL}/users`)
+    let res=await axios(BASE_URL)
     let data=res.data
-    data.forEach(element => {
+    allData=data
+    fav=fav.length || search.value ?fav :data
+    fav.forEach(element => {
         tbody.innerHTML+=`
         <tr >
         <th scope="row">${element.id}</th>
@@ -17,10 +23,9 @@ tbody.innerHTML=""
         <td>${element.position}</td>
         <td>${element.salary}</td>
         <td>${element.phone}</td>
-        <td class="action">
-        <a href=""><i class="fa-sharp fa-solid fa-trash"></i></a>
+        <td class="action d-flex p-5 gap-1">
+        <a href=""  onclick="deleteBtn(${element.id})"><i class="fa-sharp fa-solid fa-trash"></i></a>
         <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
-        <a href="" onclick="deleteBtn(${element.id})"><i class="fa-solid fa-xmark"></i></a>
         <a id="myBtn" onclick="detailBtn(${element.id})" ><i class="fa-solid fa-eye"></i></a>
                   <div id="myModal" class="modal">
                     <div class="modal-content">
@@ -35,6 +40,25 @@ tbody.innerHTML=""
 }
 getTablePersonnel()
 
+async function deleteBtn(id){
+  await axios.delete(`${BASE_URL}/${id}`)
+  fav=allData.filter(item=>item.id!=id)
+  getTablePersonnel()
+}
+search.addEventListener("input" , async function(event){
+  fav=allData 
+  // console.log(allData);
+  fav=fav.filter(item=>item.name.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase()))
+  // console.log(fav);
+  getTablePersonnel()
+})
+filter.addEventListener("input" , async function(event){
+  fav=allData 
+  // console.log(allData);
+  fav=fav.filter(item=>item.salary.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase()))
+  // console.log(fav);
+  getTablePersonnel()
+})
 // var modal = document.querySelector("#myModal");
 
 // Get the button that opens the modal

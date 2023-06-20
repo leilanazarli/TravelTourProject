@@ -1,7 +1,7 @@
 .personnel-container{
     font-family: $font-poppins;
-    width: 80%;
-    padding: 100px 0 0 350px;
+    width: 100%;
+    padding: 100px 20px 0 350px;
     @include onlyFlexColumn();
     .navbar-tourmaster {
         .search_box{

@@ -9,6 +9,11 @@ background-size: cover;
         .container{
             @include flexCenter();
             gap: 20px;
+            @media screen and (max-width: 991px) {
+            .search{
+                width: 25%;
+            }
+            }
             .form-select ,.form-control ,span{
             background-color: #585d6b;
             border-radius: 0;
