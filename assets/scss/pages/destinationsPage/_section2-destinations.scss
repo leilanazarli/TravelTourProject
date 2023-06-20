@@ -1,0 +1,24 @@
+.detail-wrapper-biography{
+    .container{
+    display: flex;
+    p{
+        color: #8c8c8c;
+    }
+        .biography{
+            padding: 100px 0 0 0;
+            @include onlyFlexColumn();
+            p{
+            line-height: 23px;
+            }
+        }
+       
+        .chronology{
+            padding: 100px 0 0 0;
+            @include onlyFlexColumn();
+            
+            p{
+            margin-bottom: 20px;
+            }
+        }
+    }
+}
