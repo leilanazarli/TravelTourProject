@@ -1471,6 +1471,65 @@ a.active {
   }
 }
 
+.gallery-traveltour-page {
+  background: url("../img/about-img/page-title-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 200px 0;
+}
+.gallery-traveltour-page h1 {
+  color: white;
+  font-size: 43px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+}
+.gallery-traveltour-page p {
+  color: white;
+  margin-top: 30px;
+  font-size: 33px;
+  font-weight: 900;
+  font-family: "Dancing Script", cursive;
+}
+
+.gallery {
+  /**Typeo CSS End**/
+}
+.gallery img {
+  max-width: 100%;
+}
+.gallery .contaner {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: auto;
+}
+.gallery .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.25rem;
+  padding: 0.3125rem;
+}
+.gallery .carda {
+  flex: 1 0 16rem;
+  margin: 0.625rem;
+  border: 2px solid #FFFFFF;
+  overflow: hidden;
+}
+.gallery .card-image {
+  display: block;
+  height: 21.875rem;
+  background-size: cover;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  transition: transform 500ms ease-in;
+  filter: grayscale(100%);
+}
+.gallery .card-image:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
 .chatbot-toggler {
   position: fixed;
   background: #E3F2FD;

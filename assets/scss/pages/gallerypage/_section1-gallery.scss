@@ -1,19 +1,19 @@
 
-// .gallery-traveltour-page{
-//   background: url("../img/about-img/page-title-background.jpg");
-//   @include backgroundImgFixed();
-//   padding: 200px 0;
-//   h1{
-//       color: white; 
-//       font-size: 43px;
-//       font-weight: 900;
-//       font-family: $font-poppins;
-//       }
-//   p{
-//       color: white; 
-//       margin-top: 30px;
-//       font-size: 33px;
-//       font-weight: 900;
-//       font-family: $font-dancing;
-//   }
-// }
+.gallery-traveltour-page{
+  background: url("../img/about-img/page-title-background.jpg");
+  @include backgroundImgFixed();
+  padding: 200px 0;
+  h1{
+      color: white; 
+      font-size: 43px;
+      font-weight: 900;
+      font-family: $font-poppins;
+      }
+  p{
+      color: white; 
+      margin-top: 30px;
+      font-size: 33px;
+      font-weight: 900;
+      font-family: $font-dancing;
+  }
+}
