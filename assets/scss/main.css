@@ -1493,6 +1493,9 @@ a.active {
   font-family: "Dancing Script", cursive;
 }
 
+.gallery {
+  /**Typeo CSS End**/
+}
 .gallery h1 {
   color: white;
   font-size: 43px;
@@ -3183,7 +3186,7 @@ header h2 {
   font-size: 20px;
   font-weight: 700;
 }
-.tourFullFist-sidebar .container .tourFullList-sidebar-left .sidebar-carda .carda-body .carda-body-right a {
+.tourFullFist-sidebar .container .tourFullList-sidebar-left .sidebar-carda .carda-body .carda-body-right .button {
   position: relative;
   padding: 15px 28px;
   background: #467fe7;
@@ -3194,20 +3197,20 @@ header h2 {
   border-radius: 8px;
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
 }
-.tourFullFist-sidebar .container .tourFullList-sidebar-left .sidebar-carda .carda-body .carda-body-right a:hover {
+.tourFullFist-sidebar .container .tourFullList-sidebar-left .sidebar-carda .carda-body .carda-body-right .button:hover {
   border: 1px solid #f3b182;
   background: linear-gradient(85deg, #467fe7, #fabd92, #fac097, #467fe7);
   animation: wind 2s ease-in-out infinite;
 }
-.tourFullFist-sidebar .container .tourFullList-sidebar-left .sidebar-carda .carda-body .carda-body-right a:hover .icon-1 {
+.tourFullFist-sidebar .container .tourFullList-sidebar-left .sidebar-carda .carda-body .carda-body-right .button:hover .icon-1 {
   animation: slay-1 3s cubic-bezier(0.52, 0, 0.58, 1) infinite;
   transform: rotate(10deg);
 }
-.tourFullFist-sidebar .container .tourFullList-sidebar-left .sidebar-carda .carda-body .carda-body-right a:hover .icon-2 {
+.tourFullFist-sidebar .container .tourFullList-sidebar-left .sidebar-carda .carda-body .carda-body-right .button:hover .icon-2 {
   animation: slay-2 3s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
   transform: rotate(0);
 }
-.tourFullFist-sidebar .container .tourFullList-sidebar-left .sidebar-carda .carda-body .carda-body-right a:hover .icon-3 {
+.tourFullFist-sidebar .container .tourFullList-sidebar-left .sidebar-carda .carda-body .carda-body-right .button:hover .icon-3 {
   animation: slay-3 2s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
   transform: rotate(0);
 }
@@ -3483,6 +3486,194 @@ header h2 {
 }
 .detail-wrapper-biography .container .chronology p {
   margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+.row .sidebar-carda {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.row .sidebar-carda .carda-img img {
+  width: 170px;
+  height: 230px;
+}
+.row .sidebar-carda .carda-body {
+  display: flex;
+  padding: 10px 4px;
+}
+.row .sidebar-carda .carda-body .carda-body-left {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.row .sidebar-carda .carda-body .carda-body-left a {
+  font-size: 25px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.row .sidebar-carda .carda-body .carda-body-left p {
+  color: #b9cdf3;
+  font-size: 15px;
+}
+.row .sidebar-carda .carda-body .carda-body-left p i {
+  color: #467fe7;
+  margin-right: 10px;
+}
+.row .sidebar-carda .carda-body .carda-body-right {
+  border-left: 2px solid #b9cdf3;
+  padding: 30px 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.row .sidebar-carda .carda-body .carda-body-right p {
+  color: #b9cdf3;
+  font-size: 18px;
+}
+.row .sidebar-carda .carda-body .carda-body-right h3 {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+.row .sidebar-carda .carda-body .carda-body-right .button {
+  position: relative;
+  padding: 15px 28px;
+  background: #467fe7;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 1px solid #FEC195;
+  border-radius: 8px;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+}
+.row .sidebar-carda .carda-body .carda-body-right .button:hover {
+  border: 1px solid #f3b182;
+  background: linear-gradient(85deg, #467fe7, #fabd92, #fac097, #467fe7);
+  animation: wind 2s ease-in-out infinite;
+}
+.row .sidebar-carda .carda-body .carda-body-right .button:hover .icon-1 {
+  animation: slay-1 3s cubic-bezier(0.52, 0, 0.58, 1) infinite;
+  transform: rotate(10deg);
+}
+.row .sidebar-carda .carda-body .carda-body-right .button:hover .icon-2 {
+  animation: slay-2 3s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+  transform: rotate(0);
+}
+.row .sidebar-carda .carda-body .carda-body-right .button:hover .icon-3 {
+  animation: slay-3 2s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+  transform: rotate(0);
+}
+@keyframes wind {
+  0% {
+    background-position: 0% 50%;
+  }
+  0% {
+    background-position: 50% 100%;
+  }
+  0% {
+    background-position: 0% 50%;
+  }
+}
+.row .sidebar-carda .carda-body .carda-body-right .icon-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  transform-origin: 0 0;
+  transform: rotate(10deg);
+  transition: all 0.5s ease-in-out;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+}
+@keyframes slay-1 {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+.row .sidebar-carda .carda-body .carda-body-right .icon-2 {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 12px;
+  transform-origin: 50% 0;
+  transform: rotate(10deg);
+  transition: all 1s ease-in-out;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+}
+@keyframes slay-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.row .sidebar-carda .carda-body .carda-body-right .icon-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  transform-origin: 50% 0;
+  transform: rotate(-5deg);
+  transition: all 1s ease-in-out;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+}
+@keyframes slay-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.row .hidden {
+  display: none;
+}
+.row .pagination-container {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem 0;
+  justify-content: center;
+}
+.row .pagination-number, .row .pagination-button {
+  font-size: 1.1rem;
+  background-color: #8f8f8f;
+  border: 50%;
+  border-color: #8f8f8f;
+  margin: 0.25rem 0.25rem;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.row .pagination-number:hover, .row .pagination-button:not(.disabled):hover {
+  background: #fff;
+}
+.row .pagination-number.active {
+  color: #fff;
+  background: #467fe7;
 }
 
 .blogpage #myVideo {
