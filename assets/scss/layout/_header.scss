@@ -102,6 +102,17 @@ z-index: 3;
 
 @media screen and (max-width: 991px) {
     header{
+    .header-top{
+        .container{
+        justify-content: right;
+        .header-top-left{
+        display: none;
+    }
+    .header-top-right{
+        justify-content: right;
+    }
+    }
+    }
         .header-bottom {
         padding-bottom:30px ;
             .container{

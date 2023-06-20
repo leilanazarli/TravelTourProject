@@ -11,13 +11,13 @@
                     .row{
                         .col{
                                 @include flexColumn();
-                                gap: 30px;
+                                gap: 20px;
                                 animation-duration: 3s;
                                 animation-name: slidein;
                                 animation-iteration-count: 1;
                                 @keyframes slidein {
                                     from {
-                                      margin-left: 100%;
+                                      margin-left: 150%;
                                       width: 300%;
                                     }
                                   
@@ -26,8 +26,9 @@
                                       width: 100%;
                                     }
                                   }
+                                 
                             span{
-                                font-size: 74px !important;
+                                font-size: 74px ;
                                 font-family:  $font-dancing;
                                 font-weight:bolder !important;
                                 color: white;
@@ -37,7 +38,6 @@
                                 font-family: $font-poppins;
                                 font-size: 41px;
                                 font-weight: 900 ;
-                               
                             }
                             h6{
                                 font-size: 16px;
@@ -60,3 +60,14 @@
         }
     }
 }
+@media screen and (max-width: 991px) {
+    .col{
+    gap: 10px;
+    span{
+        font-size: 35px  !important;
+       }
+       h1{font-size: 25px;}
+       
+    }
+    
+} 
