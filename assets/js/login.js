@@ -15,7 +15,7 @@ form.addEventListener("submit" ,async function(e){
         data=data.find(element=>element.email===email.value && element.password===password.value).username
         alert("Login Successful(❁´◡`❁)")
         let user={
-            email:email.value,
+            email:email.value
         }
         usersData.push(user)
         localStorage.setItem("users",JSON.stringify(usersData))

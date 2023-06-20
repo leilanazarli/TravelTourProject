@@ -1,5 +1,24 @@
-let usersData=JSON.parse(localStorage.getItem("users")) || []
-
+let signup=document.querySelector("#signupTitle")
+let login=document.querySelector("#loginTitle")
+let userTitle=document.querySelector("#userTitle")
+userTitle.style.display="none"
+async function getUser(){
+  let res=await axios("http://localhost:8000/customers")
+  let data=res.data
+  let usersData=JSON.parse(localStorage.getItem("users"))
+  // console.log(data);
+  // console.log(data.email);
+  // console.log(usersData);
+  console.log(data.map((item)=>item.email));
+  let userEmail=usersData.find(item=>item.email)
+  if(userEmail!==[]){
+    data.map(item=>item.email===userEmail)
+    userTitle.style.display="block"
+   signup.style.display="none"
+   login.style.display="none"
+  }
+}
+getUser()
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
