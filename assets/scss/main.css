@@ -1496,6 +1496,12 @@ a.active {
 .gallery {
   /**Typeo CSS End**/
 }
+.gallery h1 {
+  color: white;
+  font-size: 43px;
+  font-family: "Dancing Script", cursive;
+  margin-top: 30px;
+}
 .gallery img {
   max-width: 100%;
 }
@@ -3612,6 +3618,43 @@ header h2 {
 }
 .detail-wrapper-biography .container .chronology p {
   margin-bottom: 20px;
+}
+
+.blogpage #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.blogpage .content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.blogpage .content h1 {
+  font-size: 20px;
+}
+.blogpage .content p {
+  font-size: 18px;
+  font-family: "Dancing Script", cursive;
+  margin: 10px 0;
+}
+.blogpage #myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.blogpage #myBtn:hover {
+  background: #ddd;
+  color: black;
 }
 
 footer .footer-top {

@@ -2,7 +2,12 @@
     
     $color_1: #444;
     $font-family_1: "Poppins", sans-serif;
-    
+    h1{
+        color: white; 
+        font-size: 43px;
+        font-family: $font-dancing;
+        margin-top: 30px;
+    }
     /**Typeo CSS End**/
     // body {
     // 	font-family: $font-family_1;
