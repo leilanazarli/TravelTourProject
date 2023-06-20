@@ -153,7 +153,7 @@ var barChartOptions = {
       theme: "dark",
     },
     xaxis: {
-      categories: ["Laptop", "Phone", "Monitor", "Headphones", "Camera"],
+      categories: ["Italy", "France", "England", "Venice", "Roma"],
       title: {
         style: {
           color: "#f5f7ff",
