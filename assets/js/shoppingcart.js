@@ -2,7 +2,7 @@ let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
 let listCard = document.querySelector('.listCard');
-let body = document.querySelector('body');
+let body = document.querySelector('section');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
@@ -12,66 +12,40 @@ openShopping.addEventListener('click', ()=>{
 closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })
-
-let products = [
-    {
-        id: 1,
-        name: 'PRODUCT NAME 1',
-        image: '1 (1).PNG',
-        price: 120000
-    },
-    {
-        id: 2,
-        name: 'PRODUCT NAME 2',
-        image: '1.PNG',
-        price: 120000
-    },
-    {
-        id: 3,
-        name: 'PRODUCT NAME 3',
-        image: 'q.PNG',
-        price: 220000
-    },
-    {
-        id: 4,
-        name: 'PRODUCT NAME 4',
-        image: '4.PNG',
-        price: 123000
-    },
-    {
-        id: 5,
-        name: 'PRODUCT NAME 5',
-        image: '5.PNG',
-        price: 320000
-    },
-    {
-        id: 6,
-        name: 'PRODUCT NAME 6',
-        image: '6.PNG',
-        price: 120000
-    }
-];
+let BASE_URL="http://localhost:8000/tours"
 let listCards  = [];
-function initApp(){
-    products.forEach((value, key) =>{
+let fav=[]
+async function initApp(){
+let res=await axios(BASE_URL)
+let data=res.data
+fav=data
+    data.forEach((element,key ) =>{
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
-            <img src="image/${value.image}">
-            <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`;
+            <img src="./assets/img/home-img/${element.img}" height="250px">
+            <div class="title">${element.shortinfo}</div>
+            <div class="price">${element.price}$</div>
+            <button onclick="addToCard(${element.id})">Add To Card</button>`;
         list.appendChild(newDiv);
     })
 }
 initApp();
+
+let usersData=JSON.parse(localStorage.getItem("users"))
+console.log(usersData);
 function addToCard(key){
-    if(listCards[key] == null){
-        // copy product form list to list card
-        listCards[key] = JSON.parse(JSON.stringify(products[key]));
-        listCards[key].quantity = 1;
-    }
-    reloadCard();
+if(usersData!==null){
+    console.log(fav[key]);
+        if(listCards[key] == null){
+            listCards[key] = JSON.parse(JSON.stringify(fav[key]));
+            listCards[key].quantity = 1;
+        }
+        reloadCard();
+}else{
+alert("U aren't registered")
+window.location.href="http://127.0.0.1:5500/TravelTourProject/login.html"
+}
 }
 function reloadCard(){
     listCard.innerHTML = '';
@@ -83,8 +57,8 @@ function reloadCard(){
         if(value != null){
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-                <div><img src="image/${value.image}"/></div>
-                <div>${value.name}</div>
+                <div><img src="./assets/img/home-img/${value.img}"/></div>
+                <div>${value.shortinfo}</div>
                 <div>${value.price.toLocaleString()}</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
@@ -102,7 +76,7 @@ function changeQuantity(key, quantity){
         delete listCards[key];
     }else{
         listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price;
+        listCards[key].price = quantity * fav[key].price;
     }
     reloadCard();
 }

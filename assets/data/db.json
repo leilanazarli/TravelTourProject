@@ -485,7 +485,7 @@
   "tours": [
     {
       "id": 1,
-      "price": "3.500",
+      "price": 1560,
       "img": "shitterstock-2.jpg",
       "destination": "San Francisco",
       "shortinfo": "Venecia - 2 DAYS IN LAKE TAHOE",
@@ -554,7 +554,7 @@
     },
     {
       "id": 1,
-      "price": "3.500",
+      "price": 3600,
       "img": "shutterstock_120562819-800x960.jpg",
       "destination": "San Francisco",
       "shortinfo": "AMERICA - 2 DAYS IN LAKE TAHOE",
@@ -625,7 +625,7 @@
     {
       "id": 2,
       "img": "shutterstock_136984760-700x450.jpg",
-      "price": "3.500",
+      "price": 3600,
       "activity": "Holiday and Seasonal Tours ",
       "shortinfo": "Germany - 2 DAYS IN LAKE TAHOE",
       "destination": "Germany",
@@ -696,7 +696,7 @@
       "id": 3,
       "destination": "Canada",
       "img": "photodune-488847-venice-m-600x600.jpg",
-      "price": "3.500",
+      "price": 3600,
       "shortinfo": "Canada - 2 DAYS IN LAKE TAHOE",
       "day": "5 Days",
       "activity": "Family Friendly Tours",
@@ -767,7 +767,7 @@
       "destination": "Italy",
       "img": "shutterstock_178807262-700x450.jpg",
       "activity": "Cultural and Thematic Tours",
-      "price": "3.500",
+      "price": 3600,
       "shortinfo": "Italy - 2 DAYS IN LAKE TAHOE",
       "day": "5 Days",
       "Availability": "Jan 16’ - Dec 16’",
@@ -838,7 +838,7 @@
       "img": "wallpaperflare.com_wallpaper (4).jpg",
       "shortinfo": "America - 2 DAYS IN LAKE TAHOE",
       "activity": "City Tours",
-      "price": "3.500",
+      "price": 3600,
       "day": "5 Days",
       "Availability": "Jan 16’ - Dec 16’",
       "duration": "1 Day Tour",
