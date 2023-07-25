@@ -47,7 +47,7 @@ if (window.innerWidth < 800) {
 sidebarLockBtn.addEventListener("click", toggleLock);
 sidebar.addEventListener("mouseleave", hideSidebar);
 sidebar.addEventListener("mouseenter", showSidebar);
-sidebarOpenBtn.addEventListener("click", toggleSidebar);
+// sidebarOpenBtn.addEventListener("click", toggleSidebar);
 sidebarCloseBtn.addEventListener("click", toggleSidebar);
 
 
@@ -67,3 +67,22 @@ window.addEventListener("load" ,function(){
     }
 })
 // ---------- CHARTS ----------
+
+
+async function getAdmin(){
+  let BASE_URL="http://localhost:8000/admin"
+sidebar_profile.innerHTML=''
+  let res= await axios(BASE_URL)
+  let data=res.data
+  data.forEach((element) => {
+  sidebar_profile.innerHTML+=`
+  <span class="nav_image">
+            <img src="${element.img}" alt="logo_img" />
+          </span>
+          <div class="data_text">
+            <span class="name">${element.username}</span>
+            <span class="email">${element.email}</span>
+          </div> 
+  `})
+}
+getAdmin()

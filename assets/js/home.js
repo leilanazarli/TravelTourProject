@@ -33,12 +33,12 @@ jQuery("#carousel").owlCarousel({
 });
 
 
-let BASE_URL="http://localhost:8000/tours"
+let BASE_Tours="http://localhost:8000/tours"
 
 async function getTours(){
   let carousel=document.querySelector(".owl-stage")
 carousel.innerHTML="" 
-  let res=await axios(BASE_URL)
+  let res=await axios(BASE_Tours)
   let data=res.data
   console.log(data);
   data.forEach(element => {
@@ -74,6 +74,59 @@ carousel.innerHTML=""
   });
 }
 getTours();
+let BASE_Articles="http://localhost:8000/articles"
+
+async function getArticles(){
+  let cards=document.querySelector(".articles-cards")
+cards.innerHTML="" 
+  let res=await axios(BASE_Articles)
+  let data=res.data
+  console.log(data);
+  data.forEach(element => {
+    cards.innerHTML+=`
+    <div class=" col col-12 col-lg-4">
+        <div class="carda">
+          <div class="img">
+            <img src="./assets/img/home-img/${element.img}" alt="">
+          </div>
+          <div class="carda-body">
+          <a href="">
+            <h6>${element.articleName}</h6>
+            <p><i class=" fa-regular fa-clock"></i> ${element.date}</p>
+          </a>
+          </div>
+        </div>
+        </div> `
+  });
+}
+getArticles();
+
+let BASE_Popular="http://localhost:8000/popularTours"
+
+async function getPopularTours(){
+  let cards=document.querySelector(".popular-tours")
+cards.innerHTML="" 
+  let res=await axios(BASE_Popular)
+  let data=res.data
+  console.log(data);
+  data.forEach(element => {
+    cards.innerHTML+=`
+    <div class="carda">
+            <img src="./assets/img/gallery-img/${element.img}" alt="">
+            <div class="carda-text">
+              <div class="carda-text-visible">
+                <h5><i class="fa-solid fa-location-dot me-1 text-primary "></i>${element.tourCountry}</h5>
+                <p>${element.tours}</p>
+              </div>
+                <div class="carda-text-hidden">
+                  <a href="./tourFullList.html">VIEW ALL TOURS</a>
+                  <div class="line"></div>
+                </div>
+            </div>
+          </div>`
+  });
+}
+getPopularTours();
 
 AOS.init();
 
@@ -201,3 +254,4 @@ let BASE_URL="http://localhost:8000/promotionsEmail"
   }
   await axios.post(`${BASE_URL}` , emailObj)
 })
+

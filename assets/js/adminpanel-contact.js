@@ -21,8 +21,6 @@ tbody.innerHTML=""
         <td>${element.message}</td>
         <td class="action">
         <a href="#" onclick="deleteBtn(${element.id})"><i class="fa-sharp fa-solid fa-trash"></i></a>
-        <a href="#"><i class="fa-solid fa-check"></i></a>
-        <a href="#" id="myBtn"><i class="fa-solid fa-eye text-primary"></i></a>
         </td>
         </tr>
         `
@@ -42,3 +40,4 @@ search.addEventListener("input" , async function(event){
     console.log(fav);
     getTableContact()
 })
+

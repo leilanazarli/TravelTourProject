@@ -14,6 +14,7 @@ async function getFav(){
         <div class="sidebar-carda">
         <div class="carda-img">
         <img src="./assets/img/home-img/${element.img}" alt="">
+    <a href="#" class="heart" onclick="addFav(${element.id})" ><i class="fa-solid  fa-heart text-danger"></i></a>
         </div>
         <div class="carda-body">
         <div class="carda-body-left">
@@ -24,9 +25,7 @@ async function getFav(){
             }</p>
             <p>${element.TourDetails.slice(0, 160)}[...]</p>
         </div>
-        
         <div class="carda-body-right">
-        <a href="#" class="" onclick="addFav(${element.id})" ><i class="fa-solid  fa-heart text-danger"></i></a>
         <h3>${element.price}$</h3>
         <a class="button" href="./destinations.html?id=${element.id}" >VIEW DETAILS
         <div class="icon-1">

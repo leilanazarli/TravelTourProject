@@ -33,6 +33,7 @@ async function getData() {
     <div class="sidebar-carda">
     <div class="carda-img">
     <img src="./assets/img/home-img/${element.img}" alt="">
+    <a href="#" class="heart" onclick="addFav(${element.id})" ><i class="fa-regular  fa-heart text-danger"></i></a>
     </div>
     <div class="carda-body">
     <div class="carda-body-left">
@@ -44,7 +45,6 @@ async function getData() {
         <p>${element.TourDetails.slice(0, 160)}[...]</p>
     </div>
     <div class="carda-body-right">
-    <a href="#" class="" onclick="addFav(${element.id})" ><i class="fa-solid  fa-heart "></i></a>
         <h3>${element.price}$</h3>
         <a class="button" href="./destinations.html?id=${element.id}" >VIEW DETAILS
           <div class="icon-1">
@@ -77,8 +77,10 @@ async function addFav(id){
   let res=await axios(`${BASE_URL}/tours/${id}`)
   let obj=res.data
   getData()
-  if(usersData!==null){
+  if(usersData!=null){
     await axios.post('http://localhost:8000/wishlist',obj)
+    this.children.classList.remove("fa-regular")
+    this.children.classList.add("fa-solid")
   }
   else{
     alert("U aren't registered")
@@ -137,7 +139,7 @@ async function getRecentArticles() {
   data.forEach((element) => {
     articles.innerHTML += `
   <div class="recent-articles-content">
-  <img src="./assets/img/gallery-img/${element.img}" alt="" width="70px">
+  <img src="./assets/img/home-img/${element.img}" alt="" width="70px">
   <div class="recent-articles-right">
     <a>${element.articleName}</a>
     <div class="recent-articles-right-text">
@@ -150,108 +152,6 @@ async function getRecentArticles() {
   });
 }
 getRecentArticles();
-// const paginationNumbers = document.getElementById("pagination-numbers");
-// // const paginatedList = document.querySelector(".data");
-// const listItems = document.querySelectorAll(".sidebar-carda");
-// const nextButton = document.getElementById("next-button");
-// const prevButton = document.getElementById("prev-button");
 
-// console.log(listItems.length);
-// const paginationLimit = 2;
-// const pageCount = Math.ceil(listItems.length / paginationLimit);
-// let currentPage = 1;
-
-// const disableButton = (button) => {
-//   button.classList.add("disabled");
-//   button.setAttribute("disabled", true);
-// };
-
-// const enableButton = (button) => {
-//   button.classList.remove("disabled");
-//   button.removeAttribute("disabled");
-// };
-
-// const handlePageButtonsStatus = () => {
-//   if (currentPage === 1) {
-//     //   listItems.slice(0,2)
-//     disableButton(prevButton);
-//   } else {
-//     enableButton(prevButton);
-//   }
-
-//   if (pageCount === currentPage) {
-//     disableButton(nextButton);
-//   } else {
-//     enableButton(nextButton);
-//   }
-// };
-
-// const handleActivePageNumber = () => {
-//   document.querySelectorAll(".pagination-number").forEach((button) => {
-//     button.classList.remove("active");
-//     const pageIndex = Number(button.getAttribute("page-index"));
-//     if (pageIndex == currentPage) {
-//       button.classList.add("active");
-//     }
-//   });
-// };
-
-// const appendPageNumber = (index) => {
-//   const pageNumber = document.createElement("button");
-//   pageNumber.className = "pagination-number";
-//   pageNumber.innerHTML = index;
-//   pageNumber.setAttribute("page-index", index);
-//   pageNumber.setAttribute("aria-label", "Page " + index);
-
-//   paginationNumbers.appendChild(pageNumber);
-// };
-
-// const getPaginationNumbers = () => {
-//   for (let i = 1; i <= pageCount; i++) {
-//     appendPageNumber(i);
-//   }
-// };
-
-// const setCurrentPage = (pageNum) => {
-//   currentPage = pageNum;
-
-//   handleActivePageNumber();
-//   handlePageButtonsStatus();
-
-//   const prevRange = (pageNum - 1) * paginationLimit;
-//   const currRange = pageNum * paginationLimit;
-
-//   listItems.forEach((item, index) => {
-//     item.classList.add("hidden");
-//     if (index >= prevRange && index < currRange) {
-//       item.classList.remove("hidden");
-//     }
-//   });
-// };
-
-// window.addEventListener("load", () => {
-//   getPaginationNumbers();
-//   setCurrentPage(1);
-
-//   prevButton.addEventListener("click", () => {
-//     setCurrentPage(currentPage - 1);
-//   });
-
-//   nextButton.addEventListener("click", () => {
-//     setCurrentPage(currentPage + 1);
-//   //  copyData=copyData.slice(0,3)
-//     // getData();
-//   });
-
-//   document.querySelectorAll(".pagination-number").forEach((button) => {
-//     const pageIndex = Number(button.getAttribute("page-index"));
-
-//     if (pageIndex) {
-//       button.addEventListener("click", () => {
-//         setCurrentPage(pageIndex);
-//       });
-//     }
-//   });
-// });
 
 

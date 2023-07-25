@@ -51,9 +51,9 @@
               </a>
             </li>
             <li class="item ">
-              <a href="./adminpanel-comments.html" class="link flex ">
-                <i class="fa-solid fa-comment"></i>
-                <span>Comments</span>
+              <a href="./editUser-admin.html" class="link flex ">
+                <i class="fa-regular fa-pen-to-square"></i>
+                <span>Add Personnel</span>
               </a>
             </li>
             <li class="item ">
@@ -68,57 +68,11 @@
                 <span>Users</span>
               </a>
             </li>
-            
-            <li class="item">
-              <a href="#" class="link flex">
-                <i class="bx bx-grid-alt"></i>
-                <span>All Projects</span>
-              </a>
-            </li>
-          </ul>
-
-          <ul class="menu_item">
-            <div class="menu_title flex">
-              <span class="title">Editor</span>
-              <span class="line"></span>
-            </div>
-            <li class="item">
-              <a href="#" class="link flex">
-                <i class="bx bxs-magic-wand"></i>
-                <span>Magic Build</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#" class="link flex">
-                <i class="bx bx-folder"></i>
-                <span>New Projects</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#" class="link flex">
-                <i class="bx bx-cloud-upload"></i>
-                <span>Upload New</span>
-              </a>
-            </li>
-          </ul>
-
           <ul class="menu_item">
             <div class="menu_title flex">
               <span class="title">Setting</span>
               <span class="line"></span>
             </div>
-            <li class="item">
-              <a href="#" class="link flex">
-                <i class="bx bx-flag"></i>
-                <span>Notice Board</span>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#" class="link flex">
-                <i class="bx bx-award"></i>
-                <span>Award</span>
-              </a>
-            </li>
             <li class="item">
               <a href="#" class="link flex">
                 <i class="bx bx-cog"></i>
@@ -142,13 +96,20 @@
 
    <div class="personnel-container">
      <!-- Navbar -->
-     <nav class="navbar-tourmaster d-flex justify-content-between">
-      <div>
-        <input type="search" placeholder="Search by Order Name..." class="search_box w-100"  id="search-personnel"/>
+     <nav class="navbar-tourmaster d-flex flex-column justify-content-center align-items-center">
+    
+      <div class="row justify-content-between w-100 ">
+        <div class="w-25">
+          <button class="filter button asc btn btn-light  search_box w-100">Ascending</button>
+        </div>
+        <div class="w-25">
+          <input type="search" placeholder="Search by Order Name..." class="search_box w-100"  id="search-personnel"/>
+        </div>
+        <div class="w-25">
+          <input type="search" placeholder="Salary Filter..." class="search_box w-100" id="filter-personnel">
+        </div>
       </div>
-      <div>
-        <input type="search" placeholder="Salary Filter..." class="search_box w-100" id="filter-personnel">
-      </div>
+      
   </nav>
   <button class="toggle" aria-pressed="false" title="Toggle Dark Mode" style="position: fixed;right: 20px;top: 20px;">
       <span class="toggle__content">
@@ -267,6 +228,7 @@
   </button>
       <!-- Tour Master -->
   <section class="tourmaster-AdminPanel">
+    
   <div class="tourmaster-title"><i class="fa-solid fa-check"></i> Employee List</div>
           <table class="table table-striped">
               <thead>
@@ -307,7 +269,13 @@
                   </td>
                   </tr> -->
               </tbody>
-          </table>
+              <!-- <div id="myModal" class="modal " style="background-color: transparent;"> -->
+                
+                <!-- </div> -->
+              </table>
+              <div class=" mt-4 mb-4  d-flex justify-content-center">
+                <button class="loadmore button btn btn-light  search_box" style="width: 200px;">LOAD MORE</button>
+              </div>
   </section>
    </div>
     

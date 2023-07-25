@@ -23,7 +23,6 @@ tbody.innerHTML=""
                   <td class="text-secondary"><i class="fa-solid fa-check"></i>${element.price}$</td>
                   <td class="action">
                   <a href=""onclick="deleteBtn(${element.id})"><i class="fa-sharp fa-solid fa-trash"></i></a>
-                  <a href=""><i class="fa-solid fa-eye"></i></a>
                   </td>
                   </tr>
         `

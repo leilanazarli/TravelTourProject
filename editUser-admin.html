@@ -24,84 +24,170 @@
         <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
         <i class="bx bx-x" id="sidebar-close"></i>
     </div>
-    <div class="menu_container">
-      <div class="menu_items">
-        <ul class="menu_item">
-          <div class="menu_title flex">
-            <span class="title ">Dashboard</span>
-            <span class="line"></span>
-          </div>
-          <li class="item ">
-            <a href="./adminpanel.html" class="link flex ">
-              <i class="bx bx-home-alt "></i>
-              <span>Overview</span>
-            </a>
-          </li>
-          <li class="item ">
-            <a href="./tourMaster.html" class="link flex  active">
-              <i class="fa-solid fa-plane"></i>
-              <span>Tour Master</span>
-            </a>
-          </li>
-          <li class="item ">
-            <a href="./personnel.html" class="link flex ">
-              <i class="fa-solid fa-person"></i>
-              <span>Personnel</span>
-            </a>
-          </li>
-          <li class="item ">
-            <a href="./editUser-admin.html" class="link flex ">
-              <i class="fa-regular fa-pen-to-square"></i>
-              <span>Add Personnel</span>
-            </a>
-          </li>
-          <li class="item ">
-            <a href="./adminpanel-contact.html" class="link flex ">
-              <i class="fa-regular fa-envelope"></i>
-              <span>Contact</span>
-            </a>
-          </li>
-          <li class="item ">
-            <a href="./adminpanel-users.html" class="link flex ">
-              <i class="fa-solid fa-users"></i>
-              <span>Users</span>
-            </a>
-          </li>
-        <ul class="menu_item">
-          <div class="menu_title flex">
-            <span class="title">Setting</span>
-            <span class="line"></span>
-          </div>
-          <li class="item">
-            <a href="#" class="link flex">
-              <i class="bx bx-cog"></i>
-              <span>Setting</span>
-            </a>
-          </li>
-        </ul>
-      </div>
 
-      <div class="sidebar_profile flex">
-        <span class="nav_image">
-          <img src="./assets/img/home-img/leilaaesthetich-low-resolution-logo-white-on-transparent-background.png" alt="logo_img" />
-        </span>
-        <div class="data_text">
-          <span class="name">Leila Nazarli</span>
-          <span class="email">leyla.nazarli.2002@gmail.com</span>
+    <div class="menu_container">
+        <div class="menu_items">
+          <ul class="menu_item">
+            <div class="menu_title flex">
+              <span class="title ">Dashboard</span>
+              <span class="line"></span>
+            </div>
+            <li class="item ">
+              <a href="./adminpanel.html" class="link flex ">
+                <i class="bx bx-home-alt "></i>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li class="item ">
+              <a href="./tourMaster.html" class="link flex ">
+                <i class="fa-solid fa-plane"></i>
+                <span>Tour Master</span>
+              </a>
+            </li>
+            <li class="item ">
+              <a href="./personnel.html" class="link flex ">
+                <i class="fa-solid fa-person"></i>
+                <span>Personnel</span>
+              </a>
+            </li>
+            <li class="item ">
+                <a href="./editUser-admin.html" class="link flex active">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                  <span>Add Personnel</span>
+                </a>
+              </li>
+            <li class="item ">
+              <a href="./adminpanel-contact.html" class="link flex ">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+            <li class="item ">
+              <a href="./adminpanel-users.html" class="link flex ">
+                <i class="fa-solid fa-users"></i>
+                <span>Users</span>
+              </a>
+            </li>
+          <ul class="menu_item">
+            <div class="menu_title flex">
+              <span class="title">Setting</span>
+              <span class="line"></span>
+            </div>
+            <li class="item">
+              <a href="#" class="link flex">
+                <i class="bx bx-cog"></i>
+                <span>Setting</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar_profile flex">
+          <span class="nav_image">
+            <img src="./assets/img/home-img/leilaaesthetich-low-resolution-logo-white-on-transparent-background.png" alt="logo_img" />
+          </span>
+          <div class="data_text">
+            <span class="name">Leila Nazarli</span>
+            <span class="email">leyla.nazarli.2002@gmail.com</span>
+          </div>
         </div>
       </div>
-    </div>
     </nav>
 
-   <div class="tourMaster-container">
+   <div class="personnel-container">
      <!-- Navbar -->
-     <nav class="navbar-tourmaster d-flex justify-content-between">
-      <div>
-        <input type="search" placeholder="Search by Order Name..." class="search_box w-100"  id="search-personnel"/>
+     <nav class="navbar-tourmaster d-flex flex-column justify-content-center align-items-center">
+     <div class=" col col-6">
+      <form
+      id="userForm"
+      action=""
+      class="row justify-content-center mb-4"
+      autocomplete="off"
+    >
+    <h1 class="add text-center mb-2" style="font-size: 30px;">Add user</h1>
+    <div class="mb-3 col-10 col-md-8">
+      <label for="userPhoto">Photo</label>
+      <div class="custom-file">
+        <input
+          type="file"
+          class="custom-file-input"
+          id="userPhoto"
+        />
+        <label class="custom-file-label" for="userPhoto"
+          >Choose file</label
+        >
       </div>
-      <div>
-        <input type="search" placeholder="Duration Filter..." class="search_box w-100" id="filter-personnel">
+    </div>
+      <div class="col-10 col-md-8 mb-3">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          placeholder="Enter a first name..."
+        />
       </div>
+      <div class="col-10 col-md-8 mb-3">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          placeholder="Enter a last name..."
+        />
+      </div>
+      
+      <div class="col-10 col-md-8 mb-3">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="Enter an email..."
+        />
+      </div>
+      <div class="col-10 col-md-8 mb-3">
+        <label for="position">Position</label>
+        <input
+          type="text"
+          class="form-control"
+          id="position"
+          placeholder="Enter a Position..."
+        />
+      </div>
+      <div class="col-10 col-md-8 mb-3">
+        <label for="salary">Salary</label>
+        <input
+          type="number"
+          class="form-control"
+          id="salary"
+          placeholder="Enter your Salary"
+          maxlength="16"
+          minlength="8"
+        />
+      </div>
+      <div class="col-10 col-md-8 mb-3">
+        <label for="phoneNumber">Phone</label>
+        <input
+          type="tel"
+          class="form-control"
+          id="phoneNumber"
+          placeholder="Enter your Phone Number"
+          maxlength="16"
+          minlength="8"
+        />
+      </div>
+      <div class="col-10 col-md-8 mb-3">
+        <input
+          id="submitBtn"
+          class="btn  add-btn"
+          style="background-color:#6d97df;"
+          type="submit"
+          value="Submit"
+        />
+      </div>
+    </form>
+     </div>  
   </nav>
   <button class="toggle" aria-pressed="false" title="Toggle Dark Mode" style="position: fixed;right: 20px;top: 20px;">
       <span class="toggle__content">
@@ -218,47 +304,13 @@
         </span>
       </span>
   </button>
-      <!-- Tour Master -->
-  <section class="tourmaster-AdminPanel">
-  <div class="tourmaster-title"><i class="fa-solid fa-check"></i> Transaction Page</div>
-          <table class="table table-striped">
-              <thead>
-                  <tr>
-                  <th scope="col">№</th>
-                  <th scope="col">Order</th>
-                  <th scope="col">Availability</th>
-                  <th scope="col">Duration</th>
-                  <th scope="col">Min Age</th>
-                  <th scope="col">Max People</th>
-                  <th scope="col">Payment Status</th>
-                  <th scope="col">Action</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <!-- <tr>
-                  <th scope="row">${}</th>
-                  <td>${}</td>
-                  <td>${}<i class="fa-regular fa-envelope text-primary"></i></td>
-                  <td>${}</td>
-                  <td>${}</td>
-                  <td>${}</td>
-                  <td class="text-secondary"><i class="fa-solid fa-check"></i>${}</td>
-                  <td class="action">
-                  <a href=""><i class="fa-sharp fa-solid fa-trash"></i></a>
-                  <a href=""><i class="fa-solid fa-check"></i></a>
-                  <a href="" onclick="deleteBtn({elementid})"><i class="fa-solid fa-xmark"></i></a>
-                  <a href=""><i class="fa-solid fa-eye"></i></a>
-                  </td>
-                  </tr> -->
-              </tbody>
-          </table>
-  </section>
+
    </div>
     
     </div>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script> 
-    <script src="./assets/js/adminpanel-common.js"></script>
-    <script src="./assets/js/tourMaster.js" ></script>
+    <script src="./assets/js/editUser-admin.js" ></script>
+    <script src="./assets/js/adminpanel-common.js" ></script>
 </body>
 </html>

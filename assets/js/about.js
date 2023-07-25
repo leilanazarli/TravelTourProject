@@ -1,12 +1,12 @@
-let cards =document.querySelector(".cards")
-let BASE_URL="http://localhost:8000/users"
+  let cards =document.querySelector(".cards")
+  let BASE_URL="http://localhost:8000/users"
 
 
 async function getData(){
- let res=await axios(BASE_URL)
- let data=res.data
- console.log(data);
- data.forEach(element => {
+  let res=await axios(BASE_URL)
+  let data=res.data
+  console.log(data);
+  data.forEach(element => {
     cards.innerHTML+=`
         <div class="col col-12 col-lg-4 col-md-6" >
         <div class="card" data-aos="flip-down">
@@ -19,7 +19,7 @@ async function getData(){
         </div>
         </div>
         </div>
-   `
- });
+    `
+});
 }
 getData() 

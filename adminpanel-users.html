@@ -38,7 +38,7 @@
             </a>
           </li>
           <li class="item ">
-            <a href="./tourMaster.html" class="link flex  active">
+            <a href="./tourMaster.html" class="link flex ">
               <i class="fa-solid fa-plane"></i>
               <span>Tour Master</span>
             </a>
@@ -62,11 +62,12 @@
             </a>
           </li>
           <li class="item ">
-            <a href="./adminpanel-users.html" class="link flex ">
+            <a href="./adminpanel-users.html" class="link flex active">
               <i class="fa-solid fa-users"></i>
               <span>Users</span>
             </a>
           </li>
+          
         <ul class="menu_item">
           <div class="menu_title flex">
             <span class="title">Setting</span>
@@ -97,10 +98,7 @@
      <!-- Navbar -->
      <nav class="navbar-tourmaster d-flex justify-content-between">
       <div>
-        <input type="search" placeholder="Search by Order Name..." class="search_box w-100"  id="search-personnel"/>
-      </div>
-      <div>
-        <input type="search" placeholder="Duration Filter..." class="search_box w-100" id="filter-personnel">
+        <input type="search" placeholder="Search by Username..." class="search_box w-100"  id="search-personnel"/>
       </div>
   </nav>
   <button class="toggle" aria-pressed="false" title="Toggle Dark Mode" style="position: fixed;right: 20px;top: 20px;">
@@ -219,18 +217,18 @@
       </span>
   </button>
       <!-- Tour Master -->
-  <section class="tourmaster-AdminPanel">
+  <section class="Users-AdminPanel">
   <div class="tourmaster-title"><i class="fa-solid fa-check"></i> Transaction Page</div>
           <table class="table table-striped">
               <thead>
                   <tr>
-                  <th scope="col">№</th>
-                  <th scope="col">Order</th>
-                  <th scope="col">Availability</th>
-                  <th scope="col">Duration</th>
-                  <th scope="col">Min Age</th>
-                  <th scope="col">Max People</th>
-                  <th scope="col">Payment Status</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">Fisrt Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Password</th>
+                  <th scope="col">Phone</th>
                   <th scope="col">Action</th>
                   </tr>
               </thead>
@@ -238,19 +236,23 @@
                   <!-- <tr>
                   <th scope="row">${}</th>
                   <td>${}</td>
-                  <td>${}<i class="fa-regular fa-envelope text-primary"></i></td>
                   <td>${}</td>
                   <td>${}</td>
                   <td>${}</td>
-                  <td class="text-secondary"><i class="fa-solid fa-check"></i>${}</td>
-                  <td class="action">
-                  <a href=""><i class="fa-sharp fa-solid fa-trash"></i></a>
-                  <a href=""><i class="fa-solid fa-check"></i></a>
+                  <td>${}</td>
+                  <td>${}</td>
+                  <td>${}</td>
+                  <td class="action"
                   <a href="" onclick="deleteBtn({elementid})"><i class="fa-solid fa-xmark"></i></a>
                   <a href=""><i class="fa-solid fa-eye"></i></a>
                   </td>
                   </tr> -->
               </tbody>
+              <!-- <div id="myModal" class="modal">
+                <div class="modal-content">
+                
+              </div>
+              </div> -->
           </table>
   </section>
    </div>
@@ -258,7 +260,7 @@
     </div>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script> 
+    <script src="./assets/js/adminpanel-users.js"></script>
     <script src="./assets/js/adminpanel-common.js"></script>
-    <script src="./assets/js/tourMaster.js" ></script>
 </body>
 </html>

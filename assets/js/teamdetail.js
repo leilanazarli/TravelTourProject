@@ -8,10 +8,10 @@ async function getDetailAbout(){
     let data=res.data
     console.log(data);
     about.innerHTML=`
-       <div class=" col col-12 col-lg-6 detail-wrapper-about-left">
+       <div class=" col col-12 col-lg-6 detail-wrapper-about-left" data-aos="fade-right">
        <img src="./assets/img/about-img/${data.image}" alt="">
        </div>
-       <div class="col col-12 col-lg-6   detail-wrapper-about-right">
+       <div class="col col-12 col-lg-6   detail-wrapper-about-right" data-aos="fade-left">
        <h1>${data.name}</h1>
        <p>${data.position}</p>
        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/leila.nezerli.2002%40gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
@@ -29,7 +29,7 @@ async function getDetailAbout(){
     let data=res.data
     console.log(data);
     allBiography.innerHTML=`
-    <div class="biography col col-12 col-lg-6">
+    <div class="biography col col-12 col-lg-6" data-aos="zoom-out-up">
     <h3>BIOGRAPHY</h3>
     <p>${data.biography}</p>
 </div>
@@ -41,7 +41,7 @@ async function getDetailAbout(){
                 <p>PHOTOGRAPHY<i class="fa-regular fa-image"></i></p>
                 <p>${data.skills.photography}%</p>
             </div>
-            <div class="line photography">
+            <div class="line photography" data-aos="fade-right">
                 
             </div>
         </div>
@@ -50,7 +50,7 @@ async function getDetailAbout(){
                 <p>ANIMATION<i class="fa-sharp fa-solid fa-gear"></i></p>
                 <p>${data.skills.animation}%</p>
             </div>
-            <div class="line animation">
+            <div class="line animation" data-aos="fade-right">
             
             </div>
         </div>
@@ -59,7 +59,7 @@ async function getDetailAbout(){
                 <p>CODING SKILL<i class="fa-solid fa-code"></i></p>
                 <p>${data.skills.codingSkill}%</p>
             </div>
-            <div class="line codingSkill">
+            <div class="line codingSkill" data-aos="fade-right">
             
             </div>
         </div>
@@ -68,13 +68,13 @@ async function getDetailAbout(){
                 <p>WORDPRESS <i class="fa-brands fa-wordpress"></i></p>
                 <p>${data.skills.wordpress}%</p>
             </div>
-            <div class="line wordpress">
+            <div class="line wordpress" data-aos="fade-right">
             
             </div>
     </div>
 </div>
 </div>
-<div class="chronology col col-12 col-lg-6">
+<div class="chronology col col-12 col-lg-6" data-aos="flip-down">
      <h3>CHRONOLOGY</h3>
     <div class="firstWorkplace">
     <h5>${data.chronology.firstWorkplace.whenstarted}</h5>
@@ -103,9 +103,9 @@ async function getDetailAbout(){
     let data=res.data
     console.log(data);
     contact.innerHTML=`
-    <h1>CONTACT INFO</h1>
-    <p>Phone:${data.phone}</p>
-    <p>Email:${data.email}</p>
+    <h1 data-aos="zoom-out-up">CONTACT INFO</h1>
+    <p data-aos="zoom-out-up">Phone:${data.phone}</p>
+    <p data-aos="zoom-out-up">Email:${data.email}</p>
     `
     }
     getDetailContact()

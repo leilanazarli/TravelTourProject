@@ -11,6 +11,11 @@ footer{
         color: white;
         }
             .row{
+                @media screen and (max-width: 991px) {
+                .middle , .right{
+                    padding-top: 30px;
+                }
+                }
                 .left{
                        display: flex;
                        gap: 30px;
@@ -31,6 +36,7 @@ footer{
                     }
                 }
                 .middle{
+                
                 h3{
                 margin-bottom: 30px;
                 }

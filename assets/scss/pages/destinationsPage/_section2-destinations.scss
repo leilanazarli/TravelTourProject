@@ -1,19 +1,25 @@
-.detail-wrapper-biography{
+.detail-wrapper-biography-destinations{
     .container{
     display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    h3{
+     font-size: 35px;
+    }
     p{
         color: #8c8c8c;
     }
         .biography{
-            padding: 100px 0 0 0;
+            padding: 100px 130px 100px 0;
             @include onlyFlexColumn();
             p{
             line-height: 23px;
             }
         }
-       
+        
         .chronology{
-            padding: 100px 0 0 0;
+            padding: 100px 0;
             @include onlyFlexColumn();
             
             p{

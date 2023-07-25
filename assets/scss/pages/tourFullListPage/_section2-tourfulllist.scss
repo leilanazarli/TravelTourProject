@@ -14,9 +14,16 @@
                 gap: 20px;
                 margin-bottom: 30px;
                 .carda-img{
+                    position: relative;
                     img{
                         width: 170px;
                         height: 230px;
+                    }
+                    .heart{
+                        left: 15px;
+                        top: 15px;
+                        font-size: 20px;
+                        position: absolute;
                     }
                 }
                 .carda-body{
