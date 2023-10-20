@@ -2336,6 +2336,14 @@ header h2 {
   position: relative;
   transition: 1s;
 }
+.home-sec7 .container .home-sec7-img .row .col .carda img {
+  height: 300px;
+}
+@media screen and (max-width: 991px) {
+  .home-sec7 .container .home-sec7-img .row .col .carda img {
+    height: 150px;
+  }
+}
 .home-sec7 .container .home-sec7-img .row .col .carda:hover .carda-body {
   display: flex;
   background-color: rgba(0, 0, 0, 0.4);

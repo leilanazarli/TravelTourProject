@@ -12,7 +12,7 @@ async function getUser(){
   // console.log(usersData);
   console.log(data.map((item)=>item.email));
   let userEmail=usersData.find(item=>item.email)
-  if(userEmail!==[]){
+  if(userEmail!=[]){
     data.map(item=>item.email===userEmail)
     userTitle.style.display="block"
    signup.style.display="none"

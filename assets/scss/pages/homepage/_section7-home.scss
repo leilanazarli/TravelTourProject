@@ -31,6 +31,14 @@
                 .carda{
                     position: relative;
                     transition: 1s;
+                    img{
+                        height: 300px;
+                    }
+                    @media screen and (max-width:991px)  {
+                        img{
+                        height: 150px;
+                        }
+                    }
                     &:hover{
                         .carda-body{
                         display: flex;

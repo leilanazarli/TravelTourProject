@@ -87,7 +87,7 @@ cards.innerHTML=""
     <div class=" col col-12 col-lg-4">
         <div class="carda">
           <div class="img">
-            <img src="./assets/img/home-img/${element.img}" alt="">
+            <img src="./assets/img/home-img/${element.img}" alt="" >
           </div>
           <div class="carda-body">
           <a href="">
